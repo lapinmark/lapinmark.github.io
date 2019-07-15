@@ -1,0 +1,121 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700|PT+Serif&display=swap')
+    link(rel='stylesheet' href='styles/main.css')
+    title agency
+  body
+    header.header
+        .container.header__container
+            .header__topline
+                .logo.topline__logo agency
+                nav.topline__menu
+                    a.topline__menu-item.topline__menu-item_active(href='#') Home
+                    a.topline__menu-item(href='#') About
+                    a.topline__menu-item(href='#') Services
+                    a.topline__menu-item(href='#') Gallery
+                    a.topline__menu-item(href='#') Contact
+            .mobile-menu
+              .burger
+              .mobile-menu__items
+                a.mobile-menu__item(href='#') Home
+                a.mobile-menu__item(href='#') About
+                a.mobile-menu__item(href='#') Services
+                a.mobile-menu__item(href='#') Gallery
+                a.mobile-menu__item(href='#') Contact
+            h1.header__teaser
+                span.header__teaser_highlight Trusted <br>
+                |by every1
+            p.header__intro. 
+                Lorem Ipsum is simply dummy text of the printing and <br> 
+                typesetting industry. Lorem Ipsum has been the <br> 
+                industry's standard dummy text ever since the 1500s
+            form.header__request(action='' method='POST')
+              p.header__request-title Request a quote
+              input.header__request-name(type='text' placeholder='Full Name')
+              input.header__request-email(type='text' placeholder='Email Address')
+              input.header__request-phone(type='text' placeholder='Phone Number')
+              input.header__request-country(type='text' placeholder='Country')
+              .header__request-permission-wrapper
+                input.header__request-permission-checkbox(type='checkbox' id='request-permission')
+                label.header__request-permission-label(for='request-permission') I accept the terms & conditions
+              a.send.header__request-send(href='#') Send
+    section.services
+      .container.services__container
+        h1.services__title
+          span.services__title_highlight Our 
+          |services
+        .services__items
+          .services__item
+            img.services__icon(src='img/heart.png')
+            p.services__descr Making your trip <br> beautiful and easier
+          .services__item
+            img.services__icon(src='img/tools.png')
+            p.services__descr Tools to help you <br> succeed tommorow
+          .services__item
+            img.services__icon(src='img/ideas.png')
+            p.services__descr Ideas that will blow <br> you out the blue.
+          .services__item
+            img.services__icon(src='img/navigate.png')
+            p.services__descr Navigate your path <br> to beautiful world.
+    section.story
+      .container.story__container
+        p.story__paragraph We are in business for over 6 years providing amazing services to client <br>and people love them to the core. View our story to know more.
+        a.story__more(href='#') Our story
+    section.pricing
+      .container.pricing__container
+        h1.pricing__title Pricing
+        .pricing__tariffes
+          .pricing__tariff
+            h2.pricing__tariff-name Starter
+            h3.pricing__tariff-price Free
+            p.pricing__tariff-descr Free Service<br>Multiple Accounts<br>Management No<br>--<br>--
+            a.pricing__tariff-more(href='#') Try
+          .pricing__tariff.pricing__tariff_popular
+            h2.pricing__tariff-name Business
+            h3.pricing__tariff-price $97
+            p.pricing__tariff-descr Free Service<br>Multiple Accounts<br>Management No<br>Unlimited Data<br>--
+            a.pricing__tariff-more(href='#') Sign up
+          .pricing__tariff
+            h2.pricing__tariff-name Professional
+            h3.pricing__tariff-price $297
+            p.pricing__tariff-descr Free Service<br>Multiple Accounts<br>Management No<br>Unlimited Data<br>Whatever You Need
+            a.pricing__tariff-more(href='#') Sign up
+    section.testimonial-gallery
+      .container.testimonial-gallery__container
+        section.testimonial
+          h1.testimonial__title Testimonial
+          .testimonial__feedback
+            p.testimonial__feedback-paragraph I have been involved with this comapny<br>for ages and just want to say this is a<br>great work by designcoon.
+            h2.testimonial__feedback-author DJ Bravo - Frequent Travelera
+            img.testimonial__feedback-avatar(src='img/avatar1.png')
+          .testimonial__feedback
+            p.testimonial__feedback-paragraph I have been involved with this comapny<br>for ages and just.
+            h2.testimonial__feedback-author DJ Bravo - Frequent Travelera
+            img.testimonial__feedback-avatar(src='img/avatar2.png')
+        section.gallery
+          h1.gallery__title Gallery
+          .gallery__photos
+            img.gallery__photo(src='img/gallery1.png')
+            img.gallery__photo(src='img/gallery2.png')
+            img.gallery__photo(src='img/gallery3.png')
+            img.gallery__photo(src='img/gallery4.png')
+            img.gallery__photo(src='img/gallery5.png')
+            img.gallery__photo(src='img/gallery6.png')
+          a.gallery__more(href='#') View more pictures
+    footer.footer
+      .container.footer__container
+        p.footer__rights
+          |All Rights Reserved |  2016  |  Designed with love by 
+          a.footer__rights_highlight(href='#') DesignCoon
+        a.logo.footer__logo(href='#') agency
+    script(src='js/jquery-3.4.0.min.js')
+    script(src='js/mobile-menu.js')
+
+
+
+
+

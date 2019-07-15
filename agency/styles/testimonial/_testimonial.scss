@@ -1,0 +1,116 @@
+.testimonial-gallery {
+    padding: 150px 0 120px;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.testimonial {
+
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: $size-xl;
+        font-weight: $weight-bold;
+        color: $color-default;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 440px;
+        padding: 25px;
+        margin-bottom: 20px;
+        transition: 0.5s;
+
+        &:hover {
+            border-radius: 4px;
+            background-color: #93ced3;
+
+            .testimonial__feedback-paragraph {
+                color: $color-light;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__feedback-paragraph {
+        margin-bottom: 20px;
+        font-family: 'PT Serif', serif;
+        font-size: $size-md;
+        color: $color-secondary;
+        letter-spacing: -0.4px;
+    }
+
+    &__feedback-author {
+        font-family: 'Montserrat', sans-serif;
+        font-size: $size-md;
+        color: $color-default;
+    }
+
+    &__feedback-avatar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, 30px);
+        border-radius: 50%;
+        box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1080px) {
+    .testimonial-gallery {
+        padding: 100px 0 100px;
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .testimonial {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 650px) {
+    .testimonial {
+
+        &__feedback {
+            text-align: center;
+            width: auto;
+        }
+
+        &__feedback-avatar {
+            display: none;
+        }
+    }
+}
+
+/* Landscape Phones */
+
+@media (max-width: $screen-sm) {
+    .testimonial {
+
+        &__title {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .testimonial-gallery {
+        padding: 50px 0 50px;
+    }
+}

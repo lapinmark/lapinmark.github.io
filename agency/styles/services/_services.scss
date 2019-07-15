@@ -1,0 +1,111 @@
+.services {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 35px 0 70px;
+    }
+
+    &__title {
+        margin-bottom: 97px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: $size-xl;
+        font-weight: $weight-bold;
+        color: $color-default;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+
+        &_highlight {
+            color: $color-primary;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: 232px;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__icon {
+        transition: 0.3s;
+
+        &:hover {
+        transform: scale(1.1);
+        }
+    }
+
+    &__descr {
+        font-family: 'PT Serif', serif;
+        font-size: $size-md;
+        color: $color-secondary;
+
+        &:hover {
+            color: lighten($color-secondary, 25%);
+        }
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1080px) {
+    .services {
+
+        &__container {
+            padding: 70px 20px 70px;
+            text-align: center;
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media (max-width: $screen-lg) {
+    .services {
+
+        &__items {
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            gap: 40px 80px;
+            grid-template-rows: repeat(2, 232px);
+        }
+    }
+}
+
+/* Landscape Phones */
+
+@media (max-width: $screen-sm) {
+    .services {
+
+        &__title {
+            font-size: 40px;
+        }
+
+        &__items {
+            grid-template-columns: auto;
+            justify-content: center;
+            grid-template-rows: repeat(4, 232px);
+        }
+    }
+}
+
+/* Custom, iPhone Retina */
+@media (max-width: $screen-xs) {
+    .services {
+
+        &__title {
+            margin-bottom: 70px;
+        }
+
+        &__items {
+            grid-template-rows: repeat(4, 212px);
+        }
+    }
+}

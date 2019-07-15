@@ -1,0 +1,19 @@
+.send {
+    width: 353px;
+    height: 57px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-default;
+    color: $color-light;
+    font-family: 'Montserrat', sans-serif;
+    font-size: $size-lg;
+    text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+    .send {
+        width: 250px;
+    }
+}

@@ -1,0 +1,56 @@
+.story {
+    background-color: $color-primary;
+
+    &__container {
+        padding: 31px 0 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__paragraph {
+        font-family: "PT Serif";
+        font-size: $size-md;
+        color: $color-light;
+    }
+
+    &__more {
+        width: 269px;
+        height: 64px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-default;
+        color: $color-light;
+        font-family: 'Montserrat', sans-serif;
+        font-size: $size-lg;
+        text-transform: uppercase;
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1080px) {
+    .story {
+
+        &__container {
+            padding: 30px 20px 30px;
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media (max-width: $screen-lg) {
+    .story {
+
+        &__container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__paragraph {
+            margin-bottom: 30px;
+        }
+    }
+}
