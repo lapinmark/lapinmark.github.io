@@ -1,0 +1,204 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.topline__logo {
+		margin-left: 10px;
+	}
+	.topline__search {
+		margin: 10px 20px;
+	}
+	.topline__search-title {
+		display: none;
+	}
+	.team__card {
+		margin-right: 30px;
+		margin-left: 30px;
+		box-shadow: -10px -10px 0 0 #ccc;
+	}
+}
+
+@media only screen and (max-width : 950px) {
+	footer {
+		padding: 25px 0 23px;
+	}
+	footer .footer {
+		flex-wrap: wrap;
+		justify-content: space-around;
+		text-align: left;
+	}
+	footer .footer__column:nth-child(n+3) {
+		order: 1;
+	}
+	footer .footer::after {
+		content: '';
+		width: 100%;
+		order: 0;
+	}
+	footer .footer__column {
+		width: 40%;
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (max-width : 930px) {
+	.about p {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.services__cont {
+		  flex-wrap: wrap;
+		  justify-content: center;
+	}
+	.services__cont::after {
+		content: '';
+		width: 100%;
+		order: 0;
+	}
+	.services__item {
+		border-left: 1px solid #dcdcdc;
+		border-bottom: 1px solid #dcdcdc;
+	}
+	.services__item:nth-child(n+3) {
+		order: 1;
+	}
+	
+}
+
+@media only screen and (max-width : 913px) {
+	
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.logo__title {
+		display: none;
+	}
+	.menu a {
+		padding: 25px 12px 25px;
+	}
+	.menu .menu__title_active::after {
+		height: 12px;
+	}
+	.about h1 {
+		font-size: 60px;
+	}
+}
+
+@media only screen and (max-width : 630px) {
+	.menu a {
+		padding: 20px 8px;
+	}
+	.menu .menu__title_active::after , .menu .menu__title_active::before {
+		display: none;
+	}
+	.menu .menu__title_marked {
+		padding: 4px 12px;
+	}
+	.about h1 {
+		font-size: 50px;
+	}
+	footer .footer__column {
+		width: 60%;
+		text-align: center;
+	}
+	footer .recent__row {
+		justify-content: center;
+	}
+	footer .contact__row {
+		justify-content: center;
+	}
+}
+
+@media only screen and (max-width : 576px) {
+	.menu .menu__title_active {
+		background-color: inherit;
+		color: #12a3d6;
+	}
+	.menu .menu__title_marked {
+		background-color: inherit;
+		color: #f98561;
+		padding: 20px 8px;
+	}
+	.topline__logo {
+		display: none;
+	}
+	.mobile-menu {
+		display: flex;
+		flex-direction: column;
+	}
+	.mobile-menu:hover .mobile-menu__title {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+	.team {
+		padding: 50px 0 20px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.team {
+		padding: 40px 0 20px;
+	}
+	.team__card {
+		box-shadow: none;
+	}
+	.team__up {
+		flex-direction: column;
+		align-items: center;
+		margin: 0 35px;
+	}
+	.team__down {
+		text-align: center;
+	}
+	.team__right {
+		margin: 0;
+	}
+	.team__descr {
+		display: none;
+	}
+	.team__squares {
+		display: none;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

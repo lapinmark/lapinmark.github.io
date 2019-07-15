@@ -1,0 +1,139 @@
+.about {
+  padding: 100px 0;
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__mac-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__content {
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #636363;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: #222;
+    text-transform: uppercase;
+    &_highlight {
+      font-weight: 700;
+    }
+  }
+
+  &__underline {
+    margin-bottom: 30px;
+  }
+
+  &__paragraph {
+    margin-bottom: 50px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #636363;
+  }
+
+  &__features {
+    margin-bottom: 55px;
+  }
+
+  &__features-item {
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: #5a5a5a;
+
+    &_descr {
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+  &__features-item-dot {
+    margin-right: 10px;
+  }
+
+  &__browse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 50px;
+    border: 1px solid #7f7f7f;
+    border-radius: 2px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #7f7f7f;
+  }
+
+  &__browse-briefcase {
+    margin-right: 10px;
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Container */
+@media only screen and (max-width: 1140px) {
+  .about {
+    &__container {
+      padding: 0 15px;
+      justify-content: center;
+    }
+
+    &__mac-image {
+      display: none;
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+
+    &__features {
+      margin-bottom: 40px;
+    }
+
+    &__browse {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}

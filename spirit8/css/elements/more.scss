@@ -1,0 +1,29 @@
+.more {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $orange;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 2px;
+        width: 18px;
+        background-color: $orange;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        height: 18px;
+        width: 2px;
+        background-color: $orange;
+    }
+}

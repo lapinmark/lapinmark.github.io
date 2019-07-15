@@ -1,0 +1,134 @@
+.contact {
+  padding: 100px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    color: #222;
+    text-transform: uppercase;
+
+    &_highlight {
+      font-weight: 600;
+    }
+  }
+
+  &__geometry {
+    margin-bottom: 40px;
+  }
+
+  &__intro {
+    margin-bottom: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #6c6c6c;
+  }
+
+  &__form-wrapper {
+    width: 750px;
+  }
+
+  &__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    text-align: left;
+  }
+
+  &__name,
+  &__email,
+  &__message {
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #6c6c6c;
+
+    &_warning {
+      color: red;
+    }
+  }
+
+  &__name-input,
+  &__email-input {
+    height: 40px;
+    margin-bottom: 25px;
+    max-width: 360px;
+  }
+
+  &__message {
+    grid-column: 1 / span 2;
+  }
+
+  &__message-input {
+    grid-column: 1 / span 2;
+    margin-bottom: 30px;
+  }
+
+  &__submit {
+    width: 165px;
+    height: 40px;
+    background-color: $orange;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    justify-self: end;
+    grid-column: 2;
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Container */
+@media only screen and (max-width: 1140px) {
+  .contact__container {
+    padding: 0 15px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding: 70px 0;
+
+    &__form-wrapper {
+      width: inherit;
+    }
+
+    &__intro {
+        margin-bottom: 70px;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}

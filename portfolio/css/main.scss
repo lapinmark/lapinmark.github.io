@@ -1,0 +1,479 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+h2 {
+  color: #2190c1;
+  text-transform: uppercase;
+  font-family: "BebasNeueRegular", sans-serif;
+  font-size: 50px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.button {
+  background-color: #2190c1;
+  border-radius: 3px;
+  padding: 7px 15px;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+}
+
+input[type="text"] {
+  border-radius: 3px;
+  border: none;
+  padding: 6px;
+}
+
+/* Header */
+
+.topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__search {
+    display: flex;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    color: #515862;
+    &-title {
+      margin-right: 7px;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  &__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f98561;
+    margin-right: 3px;
+  }
+  &__rect {
+    width: 20px;
+    height: 20px;
+    background-color: #23afc8;
+    margin-right: 7px;
+  }
+  &__title {
+    font-family: "Bree Serif", serif;
+    font-size: 20px;
+    color: #606060;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  li {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+  }
+
+  a {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    color: #515862;
+    padding: 37px 19px 34px;
+    position: relative;
+  }
+  .menu__title_active {
+    background-color: #12a3d6;
+    color: #fff;
+    &::after {
+      display: block;
+      content: "";
+      background-color: #0080b7;
+      width: 100%;
+      height: 12px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      border: 5px solid transparent;
+      border-bottom: 5px solid #0080b7;
+      transform: translateX(-50%);
+    }
+  }
+  .menu__title_marked {
+    background-color: #f98561;
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px 19px 6px;
+  }
+}
+
+.search-circle {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: url(../img/loupe.png) no-repeat center center #f98561;
+}
+
+.mobile-menu {
+  position: relative;
+  background-color: #12a3d6;
+  height: 4px;
+  width: 30px;
+  display: none;
+  left: 20px;
+  &::before{
+    content: '';
+    position: absolute;
+    background-color: #f98561;
+    height: 4px;
+    width: 100%;
+    top: -9px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #f98561;
+    height: 4px;
+    width: 100%;
+    top: 9px;
+  }
+  &__title {
+    display: none;
+    position: relative;
+    top: 10px;
+    background-color: #f4f4f4;
+    font-family: "Ubuntu", sans-serif;
+    color: #515862;
+    width: 80px;
+    padding: 5px 1px;
+  }
+}
+/* Portfolio */
+
+.portfolio {
+  background-image: url(../img/portfolio.jpg);
+
+  display: flex;
+  justify-content: center;
+  padding: 125px 0 113px;
+  h1 {
+    font-family: "BebasNeueRegular", sans-serif;
+    color: #cccece;
+    font-size: 80px;
+    line-height: 58px;
+  }
+}
+
+/* About */
+
+.about {
+  text-align: center;
+  padding: 35px 0 45px;
+  h2 {
+    margin-bottom: 28px;
+  }
+  h1 {
+    color: #515862;
+    text-transform: uppercase;
+    font-family: "BebasRegular", sans-serif;
+    font-size: 70px;
+    line-height: 56px;
+    margin-top: 10px;
+  }
+  p {
+    color: #515862;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+}
+
+/* Sevices */
+
+.services {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 3px solid #a5a5a5;
+  &__cont {
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #dcdcdc;
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid #dcdcdc;
+    padding: 0 10px;
+    p {
+      margin-bottom: 26px;
+      margin-top: 20px;
+    }
+  }
+  &__title {
+    font-family: "Bree Serif", serif;
+    font-size: 20px;
+    color: #2190c1;
+  }
+  &__descr {
+    color: #515862;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+  }
+  &__notebook {
+    margin-top: 43px;
+    margin-bottom: 20px;
+  }
+  &__mobile {
+    margin-top: 32px;
+    margin-bottom: 14px;
+  }
+  &__tv {
+    margin-top: 31px;
+    margin-bottom: 17px;
+  }
+  &__calendar {
+    margin-top: 42px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Team */
+
+.team {
+  padding: 50px 0 60px;
+  h2 {
+    margin-bottom: 50px;
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 45px;
+  }
+  &__female {
+    box-shadow: -10px -10px 0 0 #ccc;
+  }
+  &__male {
+    box-shadow: 10px -10px 0 0 #ccc;
+  }
+  &__up {
+    display: flex;
+    margin-bottom: 29px;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 30px;
+  }
+  &__photo {
+    width: 129px;
+    height: 129px;
+    background-color: #b5b5b5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__prof {
+    font-family: "Bree Serif", serif;
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  &__name {
+    font-family: "BebasNeueRegular", sans-serif;
+    font-size: 32px;
+    color: #2190c1;
+    margin-bottom: 7px;
+  }
+  &__mail {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+    color: #94979b;
+    margin-bottom: 16px;
+  }
+  &__squares {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__square {
+    width: 23px;
+    height: 23px;
+    border-radius: 2px;
+    &_lblue {
+      background-color: #00a1e4;
+    }
+    &_aqua {
+      background-color: #29aecb;
+    }
+    &_dblue {
+      background-color: #0481d9;
+    }
+    &_yellow {
+      background-color: #f7941d;
+    }
+  }
+  &__descr {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 12px;
+    color: #515862;
+    margin-bottom: 30px;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #2e3e4f;
+  padding: 45px 0 23px;
+  h3 {
+    color: #f98561;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "BebasNeueRegular", sans-serif;
+    margin-bottom: 25px;
+  }
+  p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 12px;
+    color: #a3afb2;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  a {
+    color: #2190c1;
+    margin-bottom: 8px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    &__column {
+    }
+    &__row {
+      border-bottom: 1px solid #556270;
+      margin-bottom: 15px;
+      .newsletter__paragraph {
+        line-height: 1.7;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        label {
+          color: #2190c1;
+          font-family: "Ubuntu", sans-serif;
+          font-size: 13px;
+          align-self: flex-start;
+          margin-bottom: 15px;
+        }
+        .newsletter__email {
+          margin-bottom: 15px;
+        }
+        .newsletter__button {
+          align-self: flex-end;
+        }
+      }
+      .recent {
+        &__left {
+          background-color: #fff;
+          height: 56px;
+          width: 56px;
+          margin-right: 10px;
+        }
+        &__right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          p {
+            margin: 0;
+          }
+          a {
+            margin: 0;
+          }
+        }
+      }
+    }
+    &__row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+  .recent__row {
+    display: flex;
+    padding-bottom: 12px;
+  }
+  .contact {
+    p {
+      margin: 0;
+    }
+    &__row {
+      display: flex;
+      border: none;
+      margin-bottom: 20px;
+    }
+    &__left {
+      width: 40px;
+      margin-right: 10px;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .icon {
+      &-phone {
+        background: url(../img/phone.png) no-repeat center left;
+        height: 35px;
+      }
+      &-sms {
+        background: url(../img/sms.png) no-repeat center center;
+        height: 37px;
+      }
+      &-envelope {
+        background: url(../img/envelope.png) no-repeat center left;
+      }
+    }
+  }
+  
+}

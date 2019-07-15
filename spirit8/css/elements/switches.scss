@@ -1,0 +1,15 @@
+.switches {
+  display: flex;
+}
+
+.switches-item {
+  width: 9px;
+  height: 9px;
+  margin-right: 13px;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

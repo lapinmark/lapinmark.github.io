@@ -1,0 +1,15 @@
+@font-face {
+    font-family:"BebasNeueRegular";
+    src:url("../fonts/BebasNeueRegular.otf") format("otf"),
+    url("../fonts/BebasNeueRegular.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"BebasRegular";
+    src:url("../fonts/Bebas-Regular.otf") format("otf"),
+    url("../fonts/Bebas-Regular.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}

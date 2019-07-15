@@ -1,0 +1,129 @@
+.services {
+  padding: 100px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    color: #222;
+    text-transform: uppercase;
+
+    &_highlight {
+      font-weight: 600;
+    }
+  }
+
+  &__geometry {
+    margin-bottom: 40px;
+  }
+
+  &__intro {
+    margin-bottom: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: #6c6c6c;
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 263px);
+    column-gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+    width: 125px;
+    border: 5px solid $orange;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #222;
+  }
+
+  &__descr {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #222;
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Container */
+@media only screen and (max-width: 1140px) {
+  .services {
+    padding: 100px 0 40px;
+  }
+  .services__container {
+    padding: 0 15px;
+  }
+
+  .services__items {
+    grid-template-columns: repeat(2, 263px);
+  }
+
+  .services__item {
+    margin-bottom: 60px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .services {
+    padding: 60px 0 0;
+
+    &__intro {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .services__items {
+    grid-template-columns: 263px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}
