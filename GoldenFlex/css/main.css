@@ -1,0 +1,192 @@
+body {
+	font-family: Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+	color: #222222;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+header {
+	background: url(../img/first-bg.jpg) no-repeat center top / cover;
+	height: 600px;
+}
+
+.container {
+	width: 930px;
+	margin: 0 auto;
+}
+
+.heading {
+	display:flex;
+	justify-content: space-between;
+}
+
+.logo {
+	margin-top: 40px;
+	display: inline-block;
+}
+
+nav {
+	margin-top: 45px;
+	display: block;
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+}
+
+.menu li {
+	display: inline-block;
+	margin-left:40px;
+}
+
+.menu a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.titles {
+	margin-top: 180px;
+}
+
+.titles__first {
+	font-size: 40px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h1 {
+	font-size: 75px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.button {
+	background: #fed136;
+	color: #484543;
+	border-radius: 3px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 50px;
+}
+
+.title {
+	padding-top: 115px;
+}
+
+.title h2 {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.title p {
+	color: #777777;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.services {
+	margin-top: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.services__item {
+	width: 270px;
+	text-align: center;
+	display: block;
+}
+
+h3 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.services__item p , .about__item p {
+	color: #777777;
+	font-size: 14px;
+	line-height: 1.55;
+}
+
+#services {
+	padding-bottom: 120px;
+}
+
+#portfolio {
+	background: #f7f7f7;
+	padding-bottom: 120px;
+}
+
+#about {
+	padding-bottom: 25px;
+}
+
+.works {
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#about .title p {
+	margin-bottom: 90px;
+}
+
+.about__item {
+	margin-bottom: 90px;
+	text-align: right;
+	display: flex;
+	justify-content: center;
+}
+
+.about__item:nth-child(2n) {
+	text-align: left;
+}
+
+.about__item img {
+	display: block;
+	height: 180px;
+	margin: 0 50px;	
+}
+
+.about__text {
+	display: block;
+	flex: 1;
+}
+
+.about__text h3 {
+	line-height: 1.7;
+	margin-top: 0;
+}
+
+.hidden {
+	visibility: hidden;
+	flex: 1;
+}
+
+footer p {
+	font-size: 14px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 115px;
+	margin-top: 0;
+}
