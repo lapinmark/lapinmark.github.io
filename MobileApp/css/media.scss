@@ -1,0 +1,200 @@
+/*==========  Desktop First Method  ==========*/
+
+@media only screen and (max-width: 1284px) {
+  .features__flex,
+  .video__flex,
+  .team__container,
+  .feedback__container,
+  .contact__container,
+  .intro {
+    padding: 0 15px;
+  }
+  header {
+    padding-top: 0;
+  }
+  .intro {
+    margin-left: 0;
+  }
+  .iphones {
+    display: none;
+  }
+  .intro {
+    align-items: center;
+  }
+  .features__amet {
+    justify-content: space-around;
+  }
+  .amet {
+    &__column-iphone {
+      display: none;
+    }
+    &__item {
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1229px) {
+  .team {
+    padding: 90px 0 90px;
+    &__item {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1120px) {
+  .video {
+    &__flex {
+      text-align: center;
+    }
+    &__icons {
+      justify-content: center;
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 915px) {
+  .contact {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__social {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__social-icons {
+      display: flex;
+      justify-content: center;
+    }
+    &__message-name,
+    &__message-email,
+    &__message-text {
+      margin-left: 0;
+    }
+  }
+  .features__amet {
+    flex-direction: column;
+    align-items: center;
+  }
+  .amet {
+    &__icon {
+      margin-right: 20px;
+    }
+    &__column {
+      padding: 20px 0;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0 0 100px;
+  }
+  .topline {
+    margin-bottom: 100px;
+    &__menu {
+      display: none;
+    }
+    &__mobile-menu {
+      display: block;
+    }
+  }
+  .features {
+    padding: 70px 0 50px;
+  }
+  .feedback {
+    padding-bottom: 70px;
+    &__customer-company {
+      margin-bottom: 50px;
+    }
+  }
+  .contact__geometry {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .team__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .topline {
+    padding: 0 20px;
+  }
+  .team {
+    padding: 60px 0;
+    &__paragraph {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .feedback__title-text {
+    margin: 0 10px;
+  }
+  .features__amet {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .contact {
+    &__user-data {
+      width: 100%;
+    }
+    &__message-name,
+    &__message-email {
+      max-width: 395px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    &__message-submit {
+      align-self: center;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+}

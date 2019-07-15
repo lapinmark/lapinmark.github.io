@@ -1,0 +1,143 @@
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width: 1284px) {
+  .features__flex,
+  .video__flex,
+  .team__container,
+  .feedback__container,
+  .contact__container,
+  .intro {
+    padding: 0 15px; }
+  header {
+    padding-top: 0; }
+  .intro {
+    margin-left: 0; }
+  .iphones {
+    display: none; }
+  .intro {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .features__amet {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .amet__column-iphone {
+    display: none; }
+  .amet__item {
+    margin-bottom: 50px; }
+    .amet__item:last-child {
+      margin-bottom: 0; } }
+
+@media only screen and (max-width: 1229px) {
+  .team {
+    padding: 90px 0 90px; }
+    .team__item {
+      margin-bottom: 30px; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1120px) {
+  .video__flex {
+    text-align: center; }
+  .video__icons {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 915px) {
+  .contact__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .contact__social {
+    text-align: center;
+    margin-bottom: 30px; }
+  .contact__social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .contact__message-name, .contact__message-email, .contact__message-text {
+    margin-left: 0; }
+  .features__amet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .amet__icon {
+    margin-right: 20px; }
+  .amet__column {
+    padding: 20px 0; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0 0 100px; }
+  .topline {
+    margin-bottom: 100px; }
+    .topline__menu {
+      display: none; }
+    .topline__mobile-menu {
+      display: block; }
+  .features {
+    padding: 70px 0 50px; }
+  .feedback {
+    padding-bottom: 70px; }
+    .feedback__customer-company {
+      margin-bottom: 50px; }
+  .contact__geometry {
+    margin-bottom: 60px; } }
+
+@media only screen and (max-width: 630px) {
+  .team__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; } }
+
+@media only screen and (max-width: 576px) {
+  .topline {
+    padding: 0 20px; }
+  .team {
+    padding: 60px 0; }
+    .team__paragraph {
+      margin-bottom: 60px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .feedback__title-text {
+    margin: 0 10px; }
+  .features__amet {
+    margin-top: 40px; } }
+
+@media only screen and (max-width: 425px) {
+  .contact__user-data {
+    width: 100%; }
+  .contact__message-name, .contact__message-email {
+    max-width: 395px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .contact__message-submit {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center; } }
+
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
