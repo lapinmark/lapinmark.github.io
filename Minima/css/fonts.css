@@ -1,0 +1,15 @@
+@font-face{
+    font-family: 'Satellite';
+    src: url('../fonts/Satellite.otf');    
+    font-weight: normal;    
+    font-style: normal;
+    }
+
+@font-face {
+    font-family:"Socialico";
+    src:url("../fonts/Socialico.eot?") format("eot"),
+    url("../fonts/Socialico.woff") format("woff"),
+    url("../fonts/Socialico.ttf") format("truetype"),
+    url("../fonts/Socialico.svg#Socialico") format("svg");
+    font-weight:normal;
+    font-style:normal;}
