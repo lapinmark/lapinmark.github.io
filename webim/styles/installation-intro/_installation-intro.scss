@@ -1,0 +1,25 @@
+.installation-intro {
+    background: $color-bg;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title, &__paragraph, &__button-free, &__button-tariffes {
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    &__title {
+        margin-bottom: 44px;
+        font-size: $size-xl;
+        color: $color-primary;
+        text-transform: uppercase;
+    }
+
+    &__paragraph {
+        font-size: $size-xs;
+        color: $color-default;
+    }
+}

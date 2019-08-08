@@ -1,0 +1,48 @@
+.header {
+    height: 100px;
+    box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25);
+
+    &__container {
+        max-width: 1540px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    &__logo {
+        width: 115px;
+        height: 30px;
+    }
+}
+
+.menu {
+
+    &__item, &__login, &__registration {
+        font-family: "Ubuntu", sans-serif;
+        font-size: $size-sm;
+        text-transform: uppercase;
+        color: $color-default;
+    }
+
+    &__item {
+        margin-right: 25px;
+    }
+
+    &__login, &__registration {
+        margin-right: 35px;
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1080px) {
+    
+}

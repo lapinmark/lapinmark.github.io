@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu.ttf") format("truetype"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul {
+  list-style-type: none; }
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto; }
+
+.header {
+  height: 100px;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25);
+  box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25); }
+  .header__container {
+    max-width: 1540px;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; }
+  .header__logo {
+    width: 115px;
+    height: 30px; }
+
+.menu__item, .menu__login, .menu__registration {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #74757b; }
+
+.menu__item {
+  margin-right: 25px; }
+
+.menu__login, .menu__registration {
+  margin-right: 35px; }
+
+/*==========  Desktop First Method  ==========*/
+.installation-intro {
+  background: #eff4f4; }
+  .installation-intro__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .installation-intro__title, .installation-intro__paragraph, .installation-intro__button-free, .installation-intro__button-tariffes {
+    font-family: "Ubuntu", sans-serif; }
+  .installation-intro__title {
+    margin-bottom: 44px;
+    font-size: 36px;
+    color: #393e6b;
+    text-transform: uppercase; }
+  .installation-intro__paragraph {
+    font-size: 16px;
+    color: #74757b; }
+
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1080px) {
+  .footer__container {
+    padding: 0 20px; } }
+
+@media (max-width: 900px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    text-align: center; } }

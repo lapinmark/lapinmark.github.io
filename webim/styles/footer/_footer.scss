@@ -1,0 +1,26 @@
+.footer {
+    
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1080px) {
+    .footer {
+
+        &__container {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+    }
+}
