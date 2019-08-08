@@ -1,6 +1,7 @@
 .header {
     height: 100px;
     box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25);
+    position: relative;
 
     &__container {
         max-width: 1540px;
@@ -23,24 +24,34 @@
     }
 }
 
+.menu__login, .menu__registration, .navigation__link {
+    font-family: "Ubuntu", sans-serif;
+    font-size: $size-sm;
+    text-transform: uppercase;
+    color: $color-default;
+}
+
 .menu {
 
-    &__item, &__login, &__registration {
-        font-family: "Ubuntu", sans-serif;
-        font-size: $size-sm;
-        text-transform: uppercase;
-        color: $color-default;
+    &__login, &__registration {
+        margin-right: 35px;
     }
 
     &__item {
         margin-right: 25px;
     }
-
-    &__login, &__registration {
-        margin-right: 35px;
-    }
 }
 
+.navigation {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 25px;
+    }
+}
 /*==========  Desktop First Method  ==========*/
 
 @media (max-width: 1080px) {

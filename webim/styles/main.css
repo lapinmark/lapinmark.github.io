@@ -23,10 +23,36 @@ ul {
   max-width: 1020px;
   margin: 0 auto; }
 
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .button_free, .button_tariffes {
+    width: 256px;
+    height: 48px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    font-weight: 700; }
+  .button_free {
+    background-color: #2cd3b8;
+    color: #fff; }
+  .button_tariffes {
+    color: #393e6b;
+    border: 1px solid #393e6b; }
+
 .header {
   height: 100px;
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25);
-  box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25); }
+  box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25);
+  position: relative; }
   .header__container {
     max-width: 1540px;
     height: 100%;
@@ -54,20 +80,29 @@ ul {
     width: 115px;
     height: 30px; }
 
-.menu__item, .menu__login, .menu__registration {
+.menu__login, .menu__registration, .navigation__link {
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   color: #74757b; }
 
-.menu__item {
-  margin-right: 25px; }
-
 .menu__login, .menu__registration {
   margin-right: 35px; }
 
+.menu__item {
+  margin-right: 25px; }
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.navigation__item {
+  margin-right: 25px; }
+
 /*==========  Desktop First Method  ==========*/
 .installation-intro {
+  padding: 76px 0 68px;
   background: #eff4f4; }
   .installation-intro__container {
     display: -webkit-box;
@@ -85,11 +120,24 @@ ul {
   .installation-intro__title {
     margin-bottom: 44px;
     font-size: 36px;
+    font-weight: 700;
     color: #393e6b;
     text-transform: uppercase; }
   .installation-intro__paragraph {
+    margin-bottom: 59px;
     font-size: 16px;
     color: #74757b; }
+  .installation-intro__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .installation-intro__button-free {
+    margin-right: 20px; }
+
+.installation-easy__registration-icon {
+  width: 50px;
+  height: 50px;
+  background: url("../img/icons.png") 0 -148px; }
 
 /*==========  Desktop First Method  ==========*/
 @media (max-width: 1080px) {
