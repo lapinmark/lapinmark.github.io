@@ -1,0 +1,41 @@
+.channels {
+    padding: 66px 0 76px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__paragraph {
+        margin-bottom: 73px;
+        font-size: $size-sm;
+        color: $color-primary;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        row-gap: 45px;
+        column-gap: 85px; 
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-right: 29px;
+
+        &_yandex {
+            margin-left: 2px;
+        }
+    }
+
+    &__name {
+        font-family: "Ubuntu", sans-serif;
+        font-size: $size-sm;
+        text-decoration: underline;
+        color: $color-secondary;
+    }
+}

@@ -3,14 +3,17 @@
     align-items: center;
     justify-content: center;
 
-    &_free, &_tariffes {
-        width: 256px;
+    &_free, &_tariffes, &_possibilities, &_free-test {
         height: 48px;
         border-radius: 24px;
         text-transform: uppercase;
         font-family: "Ubuntu", sans-serif;
         font-size: $size-xxs;
         font-weight: $weight-bold;
+    }
+
+    &_free, &_tariffes {
+        width: 256px;
     }
 
     &_free { 
@@ -20,6 +23,18 @@
 
     &_tariffes {
         color: $color-primary;
-        border: 1px solid #393e6b; 
+        border: 1px solid $color-primary; 
+    }
+
+    &_possibilities {
+        width: 266px;
+        background-color: $color-bright;
+        color: $color-light;
+    }
+
+    &_free-test {
+        width: 276px;
+        background-color: $color-dark;
+        color: $color-light;
     }
 }

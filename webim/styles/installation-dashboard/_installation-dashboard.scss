@@ -1,0 +1,67 @@
+.installation-dashboard {
+    padding: 82px 0 87px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title, &__list-item-link, &__list-item-description {
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: $size-xl;
+        font-weight: $weight-bold;
+        color: $color-primary;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+
+    &__paragraph {
+        margin-bottom: 70px;
+        font-size: $size-xs;
+        color: $color-default;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list-item {
+        margin-bottom: 58px;
+        display: flex;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list-item-dot {
+        margin-right: 29px;
+        margin-top: 11px;
+    }
+
+    &__item-info-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list-item-link {
+        margin-bottom: 20px;
+        font-size: $size-lg;
+        color: $color-secondary;
+        text-decoration: underline;
+    }
+
+    &__list-item-description {
+        font-size: $size-xs;
+        color: $color-default;
+    }
+
+    &__list-item-description_highlight {
+        font-weight: $weight-bold;
+    }
+}

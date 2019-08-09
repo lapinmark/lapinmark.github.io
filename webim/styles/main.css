@@ -33,20 +33,70 @@ ul {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .button_free, .button_tariffes {
-    width: 256px;
+  .button_free, .button_tariffes, .button_possibilities, .button_free-test {
     height: 48px;
     border-radius: 24px;
     text-transform: uppercase;
     font-family: "Ubuntu", sans-serif;
     font-size: 14px;
     font-weight: 700; }
+  .button_free, .button_tariffes {
+    width: 256px; }
   .button_free {
     background-color: #2cd3b8;
     color: #fff; }
   .button_tariffes {
     color: #393e6b;
     border: 1px solid #393e6b; }
+  .button_possibilities {
+    width: 266px;
+    background-color: #2cd3b8;
+    color: #fff; }
+  .button_free-test {
+    width: 276px;
+    background-color: #3b4269;
+    color: #fff; }
+
+.list-item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #3b4269; }
+
+.step-icon {
+  width: 74px;
+  height: 74px; }
+  .step-icon_create {
+    background: url("../img/icons.png") 0 -74px; }
+  .step-icon_activate {
+    background: url("../img/icons.png") 0 0; }
+  .step-icon_configure {
+    background: url("../img/icons.png") -74px -74px; }
+  .step-icon_button {
+    background: url("../img/icons.png") -74px 0; }
+  .step-icon_register {
+    background: url("../img/icons.png") -148px 0; }
+  .step-icon_test {
+    background: url("../img/icons.png") -148px -74px; }
+
+.contact-icon {
+  width: 40px;
+  height: 40px; }
+  .contact-icon_social {
+    background: url("../img/icons.png") -222px 0; }
+  .contact-icon_feedback {
+    background: url("../img/icons.png") -180px -148px; }
+  .contact-icon_mobile-chat {
+    background: url("../img/icons.png") -222px -40px; }
+  .contact-icon_messengers {
+    background: url("../img/icons.png") -140px -148px; }
+  .contact-icon_yandex {
+    width: 38px;
+    background: url("../img/icons.png") -222px -120px; }
+  .contact-icon_email {
+    background: url("../img/icons.png") -100px -148px; }
+  .contact-icon_chat-bots {
+    background: url("../img/icons.png") -222px -80px; }
 
 .header {
   height: 100px;
@@ -102,7 +152,7 @@ ul {
 
 /*==========  Desktop First Method  ==========*/
 .installation-intro {
-  padding: 76px 0 68px;
+  padding: 83px 0 68px;
   background: #eff4f4; }
   .installation-intro__container {
     display: -webkit-box;
@@ -122,7 +172,8 @@ ul {
     font-size: 36px;
     font-weight: 700;
     color: #393e6b;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 26px; }
   .installation-intro__paragraph {
     margin-bottom: 59px;
     font-size: 16px;
@@ -134,10 +185,278 @@ ul {
   .installation-intro__button-free {
     margin-right: 20px; }
 
-.installation-easy__registration-icon {
-  width: 50px;
-  height: 50px;
-  background: url("../img/icons.png") 0 -148px; }
+.installation-easy {
+  padding: 75px 0 85px; }
+  .installation-easy__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .installation-easy__title, .installation-easy__paragraph, .installation-easy__step-number, .installation-easy__step-name {
+    font-family: "Ubuntu", sans-serif; }
+  .installation-easy__title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #393e6b;
+    text-transform: uppercase;
+    line-height: 26px; }
+  .installation-easy__paragraph {
+    margin-bottom: 85px;
+    font-size: 16px;
+    color: #74757b; }
+  .installation-easy__steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .installation-easy__registration, .installation-easy__code-installation {
+    margin-right: 145px;
+    height: 166px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    position: relative; }
+  .installation-easy__step-name {
+    font-size: 18px;
+    color: #0da088;
+    text-decoration: underline;
+    line-height: 24px;
+    letter-spacing: 0.45px; }
+  .installation-easy__step-number {
+    position: absolute;
+    top: -35px;
+    left: -48px;
+    font-size: 150px;
+    font-weight: 700;
+    color: #393e6b;
+    opacity: .15; }
+  .installation-easy__registration-icon, .installation-easy__code-installation-icon {
+    margin-bottom: 43px;
+    width: 50px;
+    height: 50px; }
+  .installation-easy__registration-icon {
+    background: url("../img/icons.png") 0 -148px; }
+  .installation-easy__code-installation-icon {
+    background: url("../img/icons.png") -50px -148px; }
+
+.code-installation {
+  padding: 87px 0;
+  background-color: #eff4f4; }
+  .code-installation__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .code-installation__title, .code-installation__list-item-link, .code-installation__list-item-description {
+    font-family: "Ubuntu", sans-serif; }
+  .code-installation__title {
+    margin-bottom: 70px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #393e6b;
+    text-transform: uppercase;
+    line-height: 26px; }
+  .code-installation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .code-installation__list-item {
+    margin-bottom: 58px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .code-installation__list-item:last-child {
+      margin-bottom: 0; }
+  .code-installation__list-item-dot {
+    margin-right: 29px;
+    margin-top: 11px; }
+  .code-installation__item-info-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .code-installation__list-item-link {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #0da088;
+    text-decoration: underline; }
+  .code-installation__list-item-description {
+    font-size: 16px;
+    color: #74757b; }
+  .code-installation__list-item-description_highlight {
+    font-weight: 700; }
+
+.installation-dashboard {
+  padding: 82px 0 87px; }
+  .installation-dashboard__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .installation-dashboard__title, .installation-dashboard__list-item-link, .installation-dashboard__list-item-description {
+    font-family: "Ubuntu", sans-serif; }
+  .installation-dashboard__title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #393e6b;
+    text-transform: uppercase;
+    line-height: 40px; }
+  .installation-dashboard__paragraph {
+    margin-bottom: 70px;
+    font-size: 16px;
+    color: #74757b; }
+  .installation-dashboard__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .installation-dashboard__list-item {
+    margin-bottom: 58px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .installation-dashboard__list-item:last-child {
+      margin-bottom: 0; }
+  .installation-dashboard__list-item-dot {
+    margin-right: 29px;
+    margin-top: 11px; }
+  .installation-dashboard__item-info-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .installation-dashboard__list-item-link {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #0da088;
+    text-decoration: underline; }
+  .installation-dashboard__list-item-description {
+    font-size: 16px;
+    color: #74757b; }
+  .installation-dashboard__list-item-description_highlight {
+    font-weight: 700; }
+
+.after-installation {
+  padding: 70px 0;
+  background-color: #eff4f4; }
+  .after-installation__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .after-installation__steps {
+    margin-bottom: 75px; }
+  .after-installation__step {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .after-installation__step:last-child {
+      margin-bottom: 0; }
+  .after-installation__title, .after-installation__paragraph, .after-installation__step-description {
+    font-family: "Ubuntu", sans-serif; }
+  .after-installation__title {
+    margin-bottom: 25px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #393e6b;
+    text-transform: uppercase; }
+  .after-installation__paragraph {
+    margin-bottom: 60px;
+    font-size: 16px;
+    color: #74757b; }
+  .after-installation__step-icon {
+    margin-right: 37px; }
+  .after-installation__step-description {
+    font-size: 18px;
+    color: #393e6b; }
+    .after-installation__step-description_highlight {
+      font-weight: 700;
+      font-size: 24px; }
+  .after-installation__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .after-installation__button-possibilities {
+    margin-right: 20px; }
+
+.channels {
+  padding: 66px 0 76px; }
+  .channels__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .channels__paragraph {
+    margin-bottom: 73px;
+    font-size: 18px;
+    color: #393e6b; }
+  .channels__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+    grid-template-columns: repeat(3, auto);
+    row-gap: 45px;
+    -webkit-column-gap: 85px;
+    column-gap: 85px; }
+  .channels__list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .channels__icon {
+    margin-right: 29px; }
+    .channels__icon_yandex {
+      margin-left: 2px; }
+  .channels__name {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #0da088; }
 
 /*==========  Desktop First Method  ==========*/
 @media (max-width: 1080px) {

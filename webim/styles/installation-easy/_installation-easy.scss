@@ -1,5 +1,74 @@
-.installation-easy__registration-icon {
-    width: 50px; 
-    height: 50px;
-    background: url('../img/icons.png') -0 -148px;
+.installation-easy {
+    padding: 75px 0 85px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title, &__paragraph, &__step-number, &__step-name {
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: $size-xl;
+        font-weight: $weight-bold;
+        color: $color-primary;
+        text-transform: uppercase;
+        line-height: 26px;
+    }
+
+    &__paragraph {
+        margin-bottom: 85px;
+        font-size: $size-xs;
+        color: $color-default;
+    }
+
+    &__steps {
+        display: flex;
+    }
+
+    &__registration, &__code-installation {
+        margin-right: 145px;
+        height: 166px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    &__step-name {
+        font-size: $size-sm;
+        color: $color-secondary;
+        text-decoration: underline;
+        line-height: 24px;
+        letter-spacing: 0.45px;
+    }
+
+    &__step-number {
+        position: absolute;
+        top: -35px;
+        left: -48px;
+        font-size: $size-xxxl;
+        font-weight: $weight-bold;
+        color: $color-primary;
+        opacity: .15;
+    }
+
+    &__registration-icon, &__code-installation-icon {
+        margin-bottom: 43px;
+        width: 50px; 
+        height: 50px;
+        
+    }
+
+    &__registration-icon {
+        background: url('../img/icons.png') -0 -148px;
+    }
+
+    &__code-installation-icon {
+        background: url('../img/icons.png') -50px -148px;
+    }
 }

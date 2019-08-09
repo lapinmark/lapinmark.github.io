@@ -1,0 +1,28 @@
+.step-icon {
+    width: 74px;
+    height: 74px;
+
+    &_create {
+        background: url('../img/icons.png') -0 -74px; 
+    }
+
+    &_activate {
+        background: url('../img/icons.png') -0 -0; 
+    }
+
+    &_configure {
+        background: url('../img/icons.png') -74px -74px; 
+    }
+
+    &_button {
+        background: url('../img/icons.png') -74px -0; 
+    }
+
+    &_register {
+        background: url('../img/icons.png') -148px -0; 
+    }
+
+    &_test {
+        background: url('../img/icons.png') -148px -74px; 
+    }
+}

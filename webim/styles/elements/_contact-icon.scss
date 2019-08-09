@@ -1,0 +1,33 @@
+.contact-icon {
+    width: 40px;
+    height: 40px;
+
+    &_social {
+        background: url('../img/icons.png') -222px -0;
+    }
+
+    &_feedback {
+        background: url('../img/icons.png') -180px -148px;
+    }
+
+    &_mobile-chat {
+        background: url('../img/icons.png') -222px -40px;
+    }
+
+    &_messengers {
+        background: url('../img/icons.png') -140px -148px;
+    }
+
+    &_yandex {
+        width: 38px;
+        background: url('../img/icons.png') -222px -120px;
+    }
+
+    &_email {
+        background: url('../img/icons.png') -100px -148px;
+    }
+
+    &_chat-bots {
+        background: url('../img/icons.png') -222px -80px;
+    }
+}
