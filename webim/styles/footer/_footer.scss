@@ -1,26 +1,70 @@
 .footer {
-    
+    padding: 55px 0 60px;
+    background-color: $color-primary;
+
+    &__container {
+        max-width: 1505px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__rights, &__phone-number, &__address, &__email, &__work-hours {
+        font-family: "Ubuntu", sans-serif;
+        color: $color-bg;
+    }
+
+    &__rights, &__address, &__work-hours {
+        font-weight: $weight-light;
+    }
+
+    &__logo {
+        width: 145px;
+        height: 35px;
+        margin-bottom: 25px;
+    }
+
+    &__rights {
+        font-size: $size-xxs;
+    }
+
+    &__phone-number-wrapper {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__phone-number {
+        margin-bottom: 10px;
+        font-size: $size-md;
+
+        &_main {
+            margin-bottom: 20px;
+            font-size: $size-lg;
+        }
+    }
+
+    &__emails-wrapper {
+        margin-bottom: 30px;
+    }
+
+    &__address, &__email, &__work-hours {
+        font-size: $size-xxs;
+    }
+
+    &__email {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 /*==========  Desktop First Method  ==========*/
 
 @media (max-width: 1080px) {
-    .footer {
 
-        &__container {
-            padding: 0 20px;
-        }
-    }
-}
-
-@media (max-width: 900px) {
-    .footer {
-
-        &__container {
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            text-align: center;
-        }
-    }
 }
