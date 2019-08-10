@@ -1,0 +1,87 @@
+.burger {
+    display: none;
+    height: 5px;
+    width: 57px;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    background-color: $color-bright;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::before {
+        content: '';
+        height: 5px;
+        width: 57px;
+        position: absolute;
+        bottom: 17px;
+        right: 0;
+        background-color: $color-bright;
+    }
+
+    &::after {
+        content: '';
+        height: 5px;
+        width: 57px;
+        position: absolute;
+        top: 17px;
+        right: 0;
+        background-color: $color-bright;
+    }
+
+    &_active {
+        right: 40px;
+        left: inherit;
+        transform: rotate(-45deg);        
+
+        &::before {
+            transform: translateY(17px) rotate(90deg);
+        }
+
+        &::after {
+            opacity: 0;
+        }
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: $screen-laptop) {
+    .burger {
+        display: block;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .burger {
+        left: 40px;
+
+        &_active {
+            right: 40px;
+            left: inherit;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .burger {
+        height: 3px;
+        width: 40px;
+    
+        &::before {
+            height: 3px;
+            width: 40px;
+            bottom: 11px;
+        }
+    
+        &::after {
+            height: 3px;
+            width: 40px;
+            top: 11px;
+        }
+
+        &_active::before {
+            transform: translateY(11px) rotate(90deg);        
+        }
+    }
+}

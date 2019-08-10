@@ -35,3 +35,45 @@
         margin-right: 20px;
     }
 }
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1090px) {
+    .installation-intro {
+        padding: 83px 70px 68px;
+    }
+}
+
+@media (max-width: $screen-md) {
+    .installation-intro__buttons {
+        flex-direction: column;
+    }
+
+    .installation-intro__button-free {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .installation-intro {
+        padding: 83px 40px 68px;
+
+        &__title {
+            font-size: $size-lg;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .installation-intro {
+        padding: 53px 40px 48px;
+
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__paragraph {
+            margin-bottom: 39px;
+        }
+    }
+}

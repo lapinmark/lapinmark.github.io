@@ -21,6 +21,11 @@
     &__logo {
         width: 115px;
         height: 30px;
+        transition: 0.3s;
+
+        &_hide {
+            transform: scale(0);
+        }
     }
 }
 
@@ -29,6 +34,11 @@
     font-size: $size-sm;
     text-transform: uppercase;
     color: $color-default;
+    transition: 0.3s;
+
+    &:hover {
+        color: lighten($color-default, 25%);
+    }
 }
 
 .menu {
@@ -52,8 +62,59 @@
         margin-right: 25px;
     }
 }
+
+.mobile-menu {
+    transform: translateX(-100%);
+    width: 70%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    transition: 0.5s;
+
+    &_active {
+        transform: translateX(0);
+    }
+
+    &__list {
+        padding: 65px 15px;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        background-color: #fff;
+        text-align: right;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: $size-sm;
+        color: $color-default;
+        text-transform: uppercase;
+    }
+}
+
 /*==========  Desktop First Method  ==========*/
 
-@media (max-width: 1080px) {
-    
+@media (max-width: 1565px) {
+    .header__container {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: $screen-laptop) {
+    .header__container {
+        padding: 0 70px;
+    }
+
+    .menu__authorization, .navigation {
+        display: none;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .header__container {
+        padding: 0 140px;
+    }
 }

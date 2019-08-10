@@ -54,6 +54,11 @@
         font-size: $size-lg;
         color: $color-secondary;
         text-decoration: underline;
+        transition: 0.3s;
+
+        &:hover {
+            color: lighten($color-secondary, 10%);
+        }
     }
 
     &__list-item-description {

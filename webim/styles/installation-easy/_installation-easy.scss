@@ -31,12 +31,14 @@
     }
 
     &__registration, &__code-installation {
-        margin-right: 145px;
-        height: 166px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
         position: relative;
+    }
+
+    &__registration {
+        margin-right: 145px;
     }
 
     &__step-name {
@@ -45,6 +47,11 @@
         text-decoration: underline;
         line-height: 24px;
         letter-spacing: 0.45px;
+        transition: 0.3s;
+
+        &:hover {
+            color: lighten($color-secondary, 10%);
+        }
     }
 
     &__step-number {
@@ -58,6 +65,7 @@
     }
 
     &__registration-icon, &__code-installation-icon {
+        margin-top: 49px;
         margin-bottom: 43px;
         width: 50px; 
         height: 50px;
@@ -72,3 +80,52 @@
         background: url('../img/icons.png') -50px -148px;
     }
 }
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1090px) {
+    .installation-easy {
+        padding: 75px 70px 85px;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .installation-easy {
+        padding: 75px 40px 85px;
+
+        &__title {
+            font-size: $size-lg;
+        }
+
+        &__paragraph {
+            margin-bottom: 55px;
+        }
+
+        &__registration {
+            margin-right: 100px;
+        }
+
+        &__step-number {
+            font-size: 115px;
+            top: 0;
+            left: -35px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .installation-easy__steps {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .installation-easy__registration, .installation-easy__code-installation {
+        margin-right: 0;
+        margin-left: 80px;
+    }
+
+    .installation-easy__registration {
+        margin-bottom: 30px;
+    }
+}
+

@@ -32,7 +32,10 @@ ul {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
   .button_free, .button_tariffes, .button_possibilities, .button_free-test {
     height: 48px;
     border-radius: 24px;
@@ -45,17 +48,26 @@ ul {
   .button_free {
     background-color: #2cd3b8;
     color: #fff; }
+    .button_free:hover {
+      background-color: #56dcc6; }
   .button_tariffes {
     color: #393e6b;
     border: 1px solid #393e6b; }
+    .button_tariffes:hover {
+      color: #7077b3;
+      border-color: #7077b3; }
   .button_possibilities {
     width: 266px;
     background-color: #2cd3b8;
     color: #fff; }
+    .button_possibilities:hover {
+      background-color: #56dcc6; }
   .button_free-test {
     width: 276px;
     background-color: #3b4269;
     color: #fff; }
+    .button_free-test:hover {
+      background-color: #4d578a; }
 
 .list-item-dot {
   width: 8px;
@@ -65,7 +77,14 @@ ul {
 
 .step-icon {
   width: 74px;
-  height: 74px; }
+  height: 74px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .step-icon:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); }
   .step-icon_create {
     background: url("../img/icons.png") 0 -74px; }
   .step-icon_activate {
@@ -81,7 +100,14 @@ ul {
 
 .contact-icon {
   width: 40px;
-  height: 40px; }
+  height: 40px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .contact-icon:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); }
   .contact-icon_social {
     background: url("../img/icons.png") -222px 0; }
   .contact-icon_feedback {
@@ -97,6 +123,76 @@ ul {
     background: url("../img/icons.png") -100px -148px; }
   .contact-icon_chat-bots {
     background: url("../img/icons.png") -222px -80px; }
+
+.burger {
+  display: none;
+  height: 5px;
+  width: 57px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  background-color: #2cd3b8;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .burger::before {
+    content: '';
+    height: 5px;
+    width: 57px;
+    position: absolute;
+    bottom: 17px;
+    right: 0;
+    background-color: #2cd3b8; }
+  .burger::after {
+    content: '';
+    height: 5px;
+    width: 57px;
+    position: absolute;
+    top: 17px;
+    right: 0;
+    background-color: #2cd3b8; }
+  .burger_active {
+    right: 40px;
+    left: inherit;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+    .burger_active::before {
+      -webkit-transform: translateY(17px) rotate(90deg);
+      -ms-transform: translateY(17px) rotate(90deg);
+      transform: translateY(17px) rotate(90deg); }
+    .burger_active::after {
+      opacity: 0; }
+
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1024px) {
+  .burger {
+    display: block; } }
+
+@media (max-width: 576px) {
+  .burger {
+    left: 40px; }
+    .burger_active {
+      right: 40px;
+      left: inherit; } }
+
+@media (max-width: 320px) {
+  .burger {
+    height: 3px;
+    width: 40px; }
+    .burger::before {
+      height: 3px;
+      width: 40px;
+      bottom: 11px; }
+    .burger::after {
+      height: 3px;
+      width: 40px;
+      top: 11px; }
+    .burger_active::before {
+      -webkit-transform: translateY(11px) rotate(90deg);
+      -ms-transform: translateY(11px) rotate(90deg);
+      transform: translateY(11px) rotate(90deg); } }
 
 .header {
   height: 100px;
@@ -128,13 +224,25 @@ ul {
     flex-grow: 1; }
   .header__logo {
     width: 115px;
-    height: 30px; }
+    height: 30px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .header__logo_hide {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0); }
 
 .menu__login, .menu__registration, .navigation__link {
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
-  color: #74757b; }
+  color: #74757b;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .menu__login:hover, .menu__registration:hover, .navigation__link:hover {
+    color: #b5b6b9; }
 
 .menu__login, .menu__registration {
   margin-right: 35px; }
@@ -150,7 +258,59 @@ ul {
 .navigation__item {
   margin-right: 25px; }
 
+.mobile-menu {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  width: 70%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .mobile-menu_active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  .mobile-menu__list {
+    padding: 65px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    text-align: right; }
+  .mobile-menu__item {
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #74757b;
+    text-transform: uppercase; }
+
 /*==========  Desktop First Method  ==========*/
+@media (max-width: 1565px) {
+  .header__container {
+    padding: 0 25px; } }
+
+@media (max-width: 1024px) {
+  .header__container {
+    padding: 0 70px; }
+  .menu__authorization, .navigation {
+    display: none; } }
+
+@media (max-width: 576px) {
+  .header__container {
+    padding: 0 140px; } }
+
 .installation-intro {
   padding: 83px 0 68px;
   background: #eff4f4; }
@@ -185,6 +345,34 @@ ul {
   .installation-intro__button-free {
     margin-right: 20px; }
 
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1090px) {
+  .installation-intro {
+    padding: 83px 70px 68px; } }
+
+@media (max-width: 768px) {
+  .installation-intro__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .installation-intro__button-free {
+    margin-bottom: 15px; } }
+
+@media (max-width: 576px) {
+  .installation-intro {
+    padding: 83px 40px 68px; }
+    .installation-intro__title {
+      font-size: 24px; } }
+
+@media (max-width: 320px) {
+  .installation-intro {
+    padding: 53px 40px 48px; }
+    .installation-intro__title {
+      margin-bottom: 30px; }
+    .installation-intro__paragraph {
+      margin-bottom: 39px; } }
+
 .installation-easy {
   padding: 75px 0 85px; }
   .installation-easy__container {
@@ -216,8 +404,6 @@ ul {
     display: -ms-flexbox;
     display: flex; }
   .installation-easy__registration, .installation-easy__code-installation {
-    margin-right: 145px;
-    height: 166px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -225,16 +411,23 @@ ul {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     position: relative; }
+  .installation-easy__registration {
+    margin-right: 145px; }
   .installation-easy__step-name {
     font-size: 18px;
     color: #0da088;
     text-decoration: underline;
     line-height: 24px;
-    letter-spacing: 0.45px; }
+    letter-spacing: 0.45px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .installation-easy__step-name:hover {
+      color: #11cfb0; }
   .installation-easy__step-number {
     position: absolute;
     top: -35px;
@@ -244,6 +437,7 @@ ul {
     color: #393e6b;
     opacity: .15; }
   .installation-easy__registration-icon, .installation-easy__code-installation-icon {
+    margin-top: 49px;
     margin-bottom: 43px;
     width: 50px;
     height: 50px; }
@@ -251,6 +445,40 @@ ul {
     background: url("../img/icons.png") 0 -148px; }
   .installation-easy__code-installation-icon {
     background: url("../img/icons.png") -50px -148px; }
+
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1090px) {
+  .installation-easy {
+    padding: 75px 70px 85px; } }
+
+@media (max-width: 576px) {
+  .installation-easy {
+    padding: 75px 40px 85px; }
+    .installation-easy__title {
+      font-size: 24px; }
+    .installation-easy__paragraph {
+      margin-bottom: 55px; }
+    .installation-easy__registration {
+      margin-right: 100px; }
+    .installation-easy__step-number {
+      font-size: 115px;
+      top: 0;
+      left: -35px; } }
+
+@media (max-width: 400px) {
+  .installation-easy__steps {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; }
+  .installation-easy__registration, .installation-easy__code-installation {
+    margin-right: 0;
+    margin-left: 80px; }
+  .installation-easy__registration {
+    margin-bottom: 30px; } }
 
 .code-installation {
   padding: 87px 0;
@@ -302,7 +530,12 @@ ul {
     margin-bottom: 20px;
     font-size: 24px;
     color: #0da088;
-    text-decoration: underline; }
+    text-decoration: underline;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .code-installation__list-item-link:hover {
+      color: #11cfb0; }
   .code-installation__list-item-description {
     font-size: 16px;
     color: #74757b; }
@@ -362,7 +595,12 @@ ul {
     margin-bottom: 20px;
     font-size: 24px;
     color: #0da088;
-    text-decoration: underline; }
+    text-decoration: underline;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .installation-dashboard__list-item-link:hover {
+      color: #11cfb0; }
   .installation-dashboard__list-item-description {
     font-size: 16px;
     color: #74757b; }
@@ -456,7 +694,12 @@ ul {
     font-family: "Ubuntu", sans-serif;
     font-size: 18px;
     text-decoration: underline;
-    color: #0da088; }
+    color: #0da088;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .channels__name:hover {
+      color: #11cfb0; }
 
 .footer {
   padding: 55px 0 60px;
