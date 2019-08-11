@@ -1,5 +1,5 @@
 .step-icon {
-    width: 74px;
+    min-width: 74px;
     height: 74px;
     transition: 0.3s;
 
@@ -29,5 +29,17 @@
 
     &_test {
         background: url('../img/icons.png') -148px -74px; 
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: $screen-sm) {
+    .step-icon {
+        transform: scale(0.7);
+
+        &:hover {
+            transform: scale(0.7);
+        }
     }
 }

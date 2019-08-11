@@ -44,3 +44,67 @@
         }
     }
 }
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1090px) {
+    .channels {
+        padding: 66px 70px 76px;
+    }
+}
+
+@media (max-width: $screen-lg) {
+    .channels {
+
+        &__list {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+}
+@media (max-width: $screen-md) {
+    .channels {
+
+        &__paragraph {
+            margin-bottom: 45px;
+        }
+
+        &__list {
+            grid-template-columns: auto;
+            row-gap: 45px;
+            column-gap: 85px; 
+        }
+
+        &__list-item {
+
+            &_messengers {
+                order: 1;
+            }
+
+            &_chat-bots {
+                order: 2;
+            }
+
+            &_feedback {
+                order: 3;
+            }
+
+            &_yandex {
+                order: 4;
+            }
+
+            &_mobile-chat {
+                order: 5;
+            }
+
+            &_email {
+                order: 6;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .channels {
+        padding: 66px 40px 76px;
+    }
+}

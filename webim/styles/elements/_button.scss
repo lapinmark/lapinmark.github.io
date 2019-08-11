@@ -56,3 +56,21 @@
         }
     }
 }
+
+@media (max-width: $screen-md) {
+    .button {
+    
+        &_free-test {
+            width: 266px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .button {
+    
+        &_possibilities, &_free-test {
+            width: 256px;
+        }
+    }
+}

@@ -69,14 +69,22 @@ ul {
     .button_free-test:hover {
       background-color: #4d578a; }
 
+@media (max-width: 768px) {
+  .button_free-test {
+    width: 266px; } }
+
+@media (max-width: 320px) {
+  .button_possibilities, .button_free-test {
+    width: 256px; } }
+
 .list-item-dot {
-  width: 8px;
+  min-width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: #3b4269; }
 
 .step-icon {
-  width: 74px;
+  min-width: 74px;
   height: 74px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -98,8 +106,19 @@ ul {
   .step-icon_test {
     background: url("../img/icons.png") -148px -74px; }
 
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 576px) {
+  .step-icon {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); }
+    .step-icon:hover {
+      -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transform: scale(0.7); } }
+
 .contact-icon {
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -177,7 +196,7 @@ ul {
       right: 40px;
       left: inherit; } }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .burger {
     height: 3px;
     width: 40px; }
@@ -476,7 +495,7 @@ ul {
     align-items: stretch; }
   .installation-easy__registration, .installation-easy__code-installation {
     margin-right: 0;
-    margin-left: 80px; }
+    margin-left: 30px; }
   .installation-easy__registration {
     margin-bottom: 30px; } }
 
@@ -541,6 +560,28 @@ ul {
     color: #74757b; }
   .code-installation__list-item-description_highlight {
     font-weight: 700; }
+
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1090px) {
+  .code-installation {
+    padding: 75px 70px 85px; } }
+
+@media (max-width: 576px) {
+  .code-installation {
+    padding: 75px 40px 85px; }
+    .code-installation__title {
+      margin-bottom: 50px;
+      font-size: 24px; }
+    .code-installation__list-item-link {
+      font-size: 20px; } }
+
+@media (max-width: 320px) {
+  .code-installation {
+    padding: 45px 40px 45px; }
+    .code-installation__list-item {
+      margin-bottom: 38px; }
+    .code-installation__list-item-link {
+      margin-bottom: 12px; } }
 
 .installation-dashboard {
   padding: 82px 0 87px; }
@@ -607,6 +648,36 @@ ul {
   .installation-dashboard__list-item-description_highlight {
     font-weight: 700; }
 
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1090px) {
+  .installation-dashboard {
+    padding: 75px 70px 85px; } }
+
+@media (max-width: 768px) {
+  .installation-dashboard__paragraph {
+    margin-bottom: 50px; } }
+
+@media (max-width: 576px) {
+  .installation-dashboard {
+    padding: 75px 40px 85px; }
+    .installation-dashboard__title {
+      margin-bottom: 40px;
+      font-size: 24px; }
+    .installation-dashboard__list-item-link {
+      font-size: 20px; } }
+
+@media (max-width: 320px) {
+  .installation-dashboard {
+    padding: 45px 40px 45px; }
+    .installation-dashboard__title {
+      margin-bottom: 30px; }
+    .installation-dashboard__paragraph {
+      margin-bottom: 30px; }
+    .installation-dashboard__list-item {
+      margin-bottom: 38px; }
+    .installation-dashboard__list-item-link {
+      margin-bottom: 12px; } }
+
 .after-installation {
   padding: 70px 0;
   background-color: #eff4f4; }
@@ -657,6 +728,34 @@ ul {
   .after-installation__button-possibilities {
     margin-right: 20px; }
 
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1090px) {
+  .after-installation {
+    padding: 70px; } }
+
+@media (max-width: 768px) {
+  .after-installation__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .after-installation__button-possibilities {
+    margin-bottom: 15px; } }
+
+@media (max-width: 576px) {
+  .after-installation {
+    padding: 70px 40px; }
+    .after-installation__title {
+      font-size: 24px; }
+    .after-installation__paragraph {
+      margin-bottom: 40px; }
+    .after-installation__step {
+      margin-bottom: 20px; }
+    .after-installation__step-description_highlight {
+      font-size: 18px; }
+    .after-installation__step-icon {
+      margin-right: 20px; } }
+
 .channels {
   padding: 66px 0 76px; }
   .channels__container {
@@ -701,6 +800,54 @@ ul {
     .channels__name:hover {
       color: #11cfb0; }
 
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1090px) {
+  .channels {
+    padding: 66px 70px 76px; } }
+
+@media (max-width: 992px) {
+  .channels__list {
+    -ms-grid-columns: (auto)[2];
+    grid-template-columns: repeat(2, auto); } }
+
+@media (max-width: 768px) {
+  .channels__paragraph {
+    margin-bottom: 45px; }
+  .channels__list {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    row-gap: 45px;
+    -webkit-column-gap: 85px;
+    column-gap: 85px; }
+  .channels__list-item_messengers {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1; }
+  .channels__list-item_chat-bots {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; }
+  .channels__list-item_feedback {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3; }
+  .channels__list-item_yandex {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4; }
+  .channels__list-item_mobile-chat {
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5; }
+  .channels__list-item_email {
+    -webkit-box-ordinal-group: 7;
+    -ms-flex-order: 6;
+    order: 6; } }
+
+@media (max-width: 576px) {
+  .channels {
+    padding: 66px 40px 76px; } }
+
 .footer {
   padding: 55px 0 60px;
   background-color: #393e6b; }
@@ -744,3 +891,14 @@ ul {
       margin-bottom: 0; }
 
 /*==========  Desktop First Method  ==========*/
+@media (max-width: 1575px) {
+  .footer {
+    padding: 55px 70px 60px; } }
+
+@media (max-width: 992px) {
+  .footer__logo, .footer__phone-numbers, .footer__emails {
+    display: none; } }
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 40px; } }

@@ -65,3 +65,40 @@
         font-weight: $weight-bold;
     }
 }
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: 1090px) {
+    .code-installation {
+        padding: 75px 70px 85px;
+    }
+}
+
+@media (max-width: $screen-sm) {
+    .code-installation {
+        padding: 75px 40px 85px;
+
+        &__title {
+            margin-bottom: 50px;
+            font-size: $size-lg;
+        }
+
+        &__list-item-link {
+            font-size: $size-md;
+        }
+    }
+}
+
+@media (max-width: $screen-xs) {
+    .code-installation {
+        padding: 45px 40px 45px;
+
+        &__list-item {
+            margin-bottom: 38px;
+        }
+    
+        &__list-item-link {
+            margin-bottom: 12px;
+        }
+    }
+}
