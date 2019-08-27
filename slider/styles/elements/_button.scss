@@ -2,5 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
     transition: 0.3s;
+
+    &_demo {
+        width: 249px;
+        height: 45px;
+        text-transform: uppercase;
+        color: $color-light;
+        background-color: $color-btn;
+    }
 }
