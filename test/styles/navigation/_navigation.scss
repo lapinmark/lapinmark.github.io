@@ -1,0 +1,44 @@
+.navigation {
+  background-color: $color-bg;
+}
+
+.menu {
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    width: 295px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: $color-bg;
+    color: $color-default;
+    font-family: "Open Sans", sans-serif;
+    font-size: $size-xs;
+    font-weight: $weight-semi-bold;
+
+    &_active,
+    &:hover {
+      background-color: $color-highlight;
+      color: $color-light;
+    }
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: $screen-container) {
+  .menu {
+    &__items {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item, &__item-wrapper {
+        width: 100%;
+    }
+  }
+}

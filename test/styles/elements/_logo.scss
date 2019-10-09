@@ -1,0 +1,13 @@
+.logo {
+    width: 280px;
+    height: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-default;
+    font-family: "Open Sans", sans-serif;
+    font-size: $size-xs;
+    font-weight: $weight-semi-bold;
+    background-color: $color-bg;
+    text-transform: uppercase;
+}

@@ -1,0 +1,52 @@
+.working-hours {
+    padding-top: 30px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: $size-md;
+        text-transform: uppercase;
+        font-family: "Open Sans", sans-serif;
+        color: $color-default;
+        font-weight: $weight-semi-bold;
+    }
+
+    &__schedule {
+        margin-bottom: 60px;
+        width: 240px;
+        border-collapse: collapse;
+    }
+}
+
+.schedule {
+
+    &__row {
+        height: 40px;
+
+        &_highlight {
+            background-color: $color-bg-table;
+        }
+
+        &:hover {
+            background-color: $color-highlight;
+
+            .schedule__days, .schedule__hours {
+                color: $color-light;
+            }
+        }
+    }
+
+    &__days, &__hours {
+        font-size: $size-xs;
+        text-transform: uppercase;
+        font-family: "Open Sans", sans-serif;
+        color: $color-default;
+        font-weight: $weight-semi-bold;
+        text-align: center;
+    }
+}

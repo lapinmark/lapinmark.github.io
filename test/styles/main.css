@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.ttf") format("truetype"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto; }
+
+ul {
+  list-style-type: none; }
+
+.logo {
+  width: 280px;
+  height: 102px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #555;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #ddd;
+  text-transform: uppercase; }
+
+.underline {
+  height: 3px;
+  background-color: #d24a43; }
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .button_buy {
+    width: 166px;
+    height: 40px;
+    -webkit-box-shadow: 0 2px 0 #555;
+    box-shadow: 0 2px 0 #555;
+    border-radius: 5px;
+    background-color: #d24a43;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600; }
+    .button_buy:hover {
+      background-color: #b6322c; }
+
+.header__container {
+  height: 142px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1180px) {
+  .header__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
+
+.navigation {
+  background-color: #ddd; }
+
+.menu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.menu__item {
+  width: 295px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #ddd;
+  color: #555;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600; }
+  .menu__item_active, .menu__item:hover {
+    background-color: #d24a43;
+    color: #fff; }
+
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1180px) {
+  .menu__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .menu__item, .menu__item-wrapper {
+    width: 100%; } }
+
+.about {
+  padding-top: 60px; }
+  .about__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+  .about__title, .about__paragraph {
+    color: #555;
+    font-family: "Open Sans", sans-serif; }
+  .about__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 30px; }
+  .about__title-underline {
+    margin-bottom: 42px;
+    width: 70px; }
+  .about__paragraph {
+    font-size: 16px;
+    margin-bottom: 16px; }
+    .about__paragraph_highlight, .about__paragraph_warning {
+      font-weight: 600; }
+    .about__paragraph_warning {
+      margin-bottom: 38px;
+      text-transform: uppercase;
+      color: #d24a43; }
+  .about__buy {
+    margin-bottom: 30px; }
+
+.feedback {
+  padding-top: 30px; }
+  .feedback__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .feedback__title, .feedback__author, .feedback__paragraph {
+    color: #555;
+    font-family: "Open Sans", sans-serif; }
+  .feedback__title, .feedback__author {
+    font-weight: 600; }
+  .feedback__title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center; }
+  .feedback__items {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .feedback__item {
+    margin-bottom: 30px;
+    padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 3px solid #ddd;
+    cursor: pointer; }
+    .feedback__item:hover {
+      border: 3px solid #d24a43; }
+      .feedback__item:hover .feedback__underline {
+        width: 70px; }
+      .feedback__item:hover .feedback__image {
+        border: 3px solid #d24a43; }
+      .feedback__item:hover .feedback__author, .feedback__item:hover .feedback__paragraph {
+        color: #d24a43; }
+  .feedback__image {
+    margin-right: 37px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    -webkit-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  .feedback__author {
+    margin-bottom: 10px;
+    font-size: 18px;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
+  .feedback__underline {
+    margin-bottom: 25px;
+    width: 35px;
+    -webkit-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s; }
+  .feedback__paragraph {
+    font-size: 14px;
+    font-style: italic;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
+
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1220px) {
+  .feedback__container {
+    padding: 0 20px; }
+  .feedback__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .feedback__item {
+    max-width: 580px; } }
+
+@media (max-width: 768px) {
+  .feedback__image {
+    display: none; } }
+
+.working-hours {
+  padding-top: 30px; }
+  .working-hours__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .working-hours__title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    color: #555;
+    font-weight: 600; }
+  .working-hours__schedule {
+    margin-bottom: 60px;
+    width: 240px;
+    border-collapse: collapse; }
+
+.schedule__row {
+  height: 40px; }
+  .schedule__row_highlight {
+    background-color: #eee; }
+  .schedule__row:hover {
+    background-color: #d24a43; }
+    .schedule__row:hover .schedule__days, .schedule__row:hover .schedule__hours {
+      color: #fff; }
+
+.schedule__days, .schedule__hours {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+  font-weight: 600;
+  text-align: center; }
+
+.footer {
+  background-color: #ddd; }
+  .footer__container {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer__phone-number {
+    color: #555;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.4); }

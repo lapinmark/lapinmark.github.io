@@ -1,0 +1,111 @@
+.feedback {
+    padding-top: 30px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title, &__author, &__paragraph {
+        color: $color-default;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    &__title, &__author {
+        font-weight: $weight-semi-bold;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: $size-md;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__items {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+        padding: 40px;
+        display: flex;
+        border: 3px solid $color-bg;
+        cursor: pointer;
+        
+        &:hover {
+            border: 3px solid $color-highlight;
+
+            .feedback__underline {
+                width: 70px;
+            }
+
+            .feedback__image {
+                border: 3px solid $color-highlight;
+            }
+
+            .feedback__author, .feedback__paragraph {
+                color: $color-highlight;
+            }
+        }
+    }
+
+    &__image {
+        margin-right: 37px;
+        width: 80px;
+        height: 80px;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        transition: border 0.3s;
+    }
+
+    &__author {
+        margin-bottom: 10px;
+        font-size: $size-sm;
+        transition: color 0.3s;
+    }
+
+    &__underline {
+        margin-bottom: 25px;
+        width: 35px;
+        transition: width 0.3s;
+    }
+
+    &__paragraph {
+        font-size: $size-xxs;
+        font-style: italic;
+        transition: color 0.3s;
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: $screen-container + 40px) {
+    .feedback {
+
+        &__container {
+            padding: 0 20px;
+        }
+
+        &__items {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            max-width: 580px;
+        }
+    }
+}
+
+@media (max-width: $screen-md) {
+    .feedback {
+
+        &__image {
+            display: none;
+        }
+    }
+}

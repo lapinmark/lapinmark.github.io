@@ -1,0 +1,18 @@
+.footer {
+    background-color: $color-bg;
+
+    &__container {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__phone-number {
+        color: $color-default;
+        font-family: "Open Sans", sans-serif;
+        font-size: $size-xs;
+        font-weight: $weight-semi-bold;
+        border-bottom: 1px solid rgba(85, 85, 85, 0.4);
+    }
+}

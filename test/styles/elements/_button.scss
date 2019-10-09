@@ -1,0 +1,21 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_buy {
+        width: 166px;
+        height: 40px;
+        box-shadow: 0 2px 0 $color-default;
+        border-radius: 5px;
+        background-color: $color-highlight;
+        color: $color-light;
+        font-family: "Open Sans", sans-serif;
+        font-size: $size-xs;
+        font-weight: $weight-semi-bold;
+
+        &:hover {
+            background-color: darken($color-highlight, 10%);
+        }
+    }
+}

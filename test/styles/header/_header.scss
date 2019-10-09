@@ -1,0 +1,20 @@
+.header {
+    
+    &__container {
+        height: 142px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: $screen-container) {
+    .header {
+    
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+  }
