@@ -4,6 +4,8 @@
 
 [webim](https://lapinmark.github.io/webim)
 
+[test](https://lapinmark.github.io/test)
+
 [GoldenFlex](https://lapinmark.github.io/GoldenFlex)
 
 [GoldenFloat](https://lapinmark.github.io/GoldenFloat)
