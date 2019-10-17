@@ -1,0 +1,42 @@
+// default color palette =>
+$color-default: #1a1a1a;
+$color-white: #fff;
+$color-purple: #8c5d79;
+$color-green: #89c39b;
+$color-blue: #5a9aa8;
+$color-light: #f5f5f5;
+
+// font sizes
+$size-xxs: 13px;
+$size-xs: 14px;
+$size-sm: 18px;
+$size-md: 22px;
+$size-lg: 24px;
+$size-xl: 30px;
+
+// font weight
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+// Screen resolution
+// Portrait phones
+$screen-xs: 320px;
+// Mobile L
+$screen-ml: 425px;
+// Landscape phones
+$screen-sm: 576px;
+// Tablets
+$screen-md: 768px;
+// Desktops
+$screen-lg: 992px;
+// Laptop
+$screen-laptop: 1024px;
+// Container
+$screen-container : 1065px;
+// Large desktops
+$screen-xl: 1200px;
+
+

@@ -1,0 +1,76 @@
+.header {
+  background-color: $color-purple;
+
+  &__container {
+    height: 752px;
+  }
+
+  &__menu {
+    margin: 110px auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: $color-blue;
+  }
+
+  &__menu-items {
+    position: relative;
+  }
+
+  &__menu-item-wrapper {
+    position: absolute;
+
+    &_second {
+      left: 260px;
+    }
+
+    &_third {
+      top: 130px;
+      left: -30px;
+    }
+
+    &_fourth {
+      top: 130px;
+      left: 290px;
+    }
+
+    &_fifth {
+      top: 265px;
+    }
+
+    &_sixth {
+      top: 265px;
+      left: 260px;
+    }
+  }
+
+  &__menu-item {
+    display: block;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: $color-white;
+  }
+
+  &__menu-item-title {
+    position: absolute;
+    white-space: nowrap;
+    color: $color-default;
+    font-size: $size-md;
+
+    &_left {
+      top: 30px;
+      right: 97px;
+    }
+
+    &_right {
+      top: 30px;
+      left: 97px;
+    }
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: $screen-container) {
+}
