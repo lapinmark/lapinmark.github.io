@@ -1,6 +1,7 @@
 .button {
     display: block;
     text-align: center;
+    cursor: pointer;
 
     &_social {
         margin: 0 auto;
@@ -15,5 +16,9 @@
     &_order {
         width: 250px;
         height: 70px;
+        border-radius: 5px;
+        font-size: $size-xl;
+        background-color: $color-purple;
+        text-transform: uppercase;
     }
 }

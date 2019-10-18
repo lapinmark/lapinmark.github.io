@@ -31,7 +31,8 @@ ul {
 
 .button {
   display: block;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
   .button_social {
     margin: 0 auto;
     width: 50px;
@@ -42,7 +43,11 @@ ul {
     color: #fff; }
   .button_order {
     width: 250px;
-    height: 70px; }
+    height: 70px;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: #8c5d79;
+    text-transform: uppercase; }
 
 .header {
   background-color: #8c5d79; }
@@ -159,27 +164,40 @@ ul {
   display: grid;
   -ms-grid-columns: auto auto;
   grid-template-columns: auto auto;
-  -webkit-column-gap: 30px;
-  column-gap: 30px;
+  gap: 60px 30px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
-.content__checkbox {
+.content__order-item-checkbox {
   display: none; }
+  .content__order-item-checkbox:checked + .content__order-item {
+    background-color: #f5f5f5; }
+
+.content__order-item {
+  cursor: pointer; }
+  .content__order-item:hover {
+    background-color: #f5f5f5; }
 
 .content__order-item-title {
+  margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase; }
 
 .content__order-item-image {
+  margin-bottom: 30px;
   width: 350px;
   height: 200px;
   background-color: #89c39b; }
+  .content__order-item-image:hover {
+    background-color: #8c5d79; }
 
 .content__order-button {
   -ms-grid-column-align: center;
-  justify-self: center; }
-  .content__order-button:nth-child(even) {
+  justify-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }
+  .content__order-button:nth-child(odd) {
     -ms-grid-column-span: 2;
     grid-column: span 2; }

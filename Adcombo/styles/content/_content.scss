@@ -76,29 +76,48 @@
     &__order {
         display: grid;
         grid-template-columns: auto auto;
-        column-gap: 30px;
+        gap: 60px 30px;
         justify-content: center;
     }
 
-    &__checkbox {
+    &__order-item-checkbox {
        display: none;
+
+       &:checked + .content__order-item {
+            background-color:$color-light;
+       }
+    } 
+
+    &__order-item {
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-light;
+        }
     }
 
     &__order-item-title {
+        margin-bottom: 20px;
         text-align: center;
         text-transform: uppercase;
     }
 
     &__order-item-image {
+        margin-bottom: 30px;
         width: 350px;
         height: 200px;
         background-color: $color-green;
+
+        &:hover {
+            background-color: $color-purple;
+        }
     }
 
     &__order-button {
         justify-self: center;
+        align-self: center;
 
-        &:nth-child(even) {
+        &:nth-child(odd) {
             grid-column: span 2;
         }
     }
