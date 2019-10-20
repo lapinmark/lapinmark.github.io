@@ -1,24 +1,34 @@
 .button {
-    display: block;
-    text-align: center;
-    cursor: pointer;
+  display: block;
+  text-align: center;
+  cursor: pointer;
 
-    &_social {
-        margin: 0 auto;
-        width: 50px;
-        height: 50px;
-        padding-top: 13px;
-        border-radius: 50%;
-        border: 3px solid $color-white;
-        color: $color-white;
-    }
+  &_social {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 13px;
+    border-radius: 50%;
+    border: 3px solid $color-white;
+    color: $color-white;
 
-    &_order {
-        width: 250px;
-        height: 70px;
-        border-radius: 5px;
-        font-size: $size-xl;
-        background-color: $color-purple;
-        text-transform: uppercase;
+    &:hover {
+      transform: scale(1.1);
     }
+  }
+
+  &_order {
+    width: 250px;
+    height: 70px;
+    border-radius: 5px;
+    font-size: $size-xl;
+    color: $color-default;
+    font-family: "Myriad Pro", sans-serif;
+    background-color: $color-purple;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: darken($color-purple, 10%);
+    }
+  }
 }

@@ -1,124 +1,181 @@
 .content {
+  &__container {
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 267px;
+    column-gap: 70px;
+  }
 
+  &__sidebar {
+    margin-top: 9px;
+    min-height: 150px;
+    background-color: $color-purple;
+  }
+
+  &__comment-author,
+  &__comment-text,
+  &__comment-like-title,
+  &__comment-share-title {
+    font-family: "Myriad Pro", sans-serif;
+  }
+
+  &__comment {
+    margin-bottom: 45px;
+    display: grid;
+    grid-template-columns: auto 1fr 137px;
+  }
+
+  &__comment-avatar-wrapper {
+    padding-top: 35px;
+    padding-left: 35px;
+    background-color: $color-green;
+  }
+
+  &__comment-avatar {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: $color-purple;
+  }
+
+  &__comment-text-wrapper {
+    padding-top: 24px;
+    padding-left: 12px;
+    background-color: $color-green;
+  }
+
+  &__comment-author {
+    margin-bottom: 15px;
+    font-size: $size-sm;
+    font-weight: $weight-bold;
+  }
+
+  &__comment-text {
+    margin-bottom: 20px;
+    font-size: $size-sm;
+  }
+
+  &__comment-social {
+    padding-top: 20px;
+    background-color: $color-purple;
+  }
+
+  &__comment-like-title,
+  &__comment-share-title {
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__comment-like-title {
+    margin-bottom: 12px;
+  }
+
+  &__comment-share-title {
+    margin-bottom: 8px;
+  }
+
+  &__comment-like-button {
+    margin-bottom: 6px;
+  }
+
+  &__comment-share-button {
+    margin-bottom: 17px;
+  }
+
+  &__order-item-title,
+  &__order-item-description {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  &__order {
+    margin-bottom: 75px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px 20px;
+    justify-content: center;
+  }
+
+  &__order-item-checkbox {
+    display: none;
+
+    &:checked + .content__order-item {
+      background-color: gray;
+    }
+  }
+
+  &__order-item {
+    padding-bottom: 10px;
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+
+  &__order-item-title {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__order-item-description {
+    font-size: $size-xs;
+  }
+
+  &__order-item-image {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 350px;
+    height: 200px;
+    background-color: $color-green;
+
+    &:hover {
+      background-color: $color-purple;
+    }
+  }
+
+  &__order-button {
+    justify-self: center;
+    align-self: center;
+
+    &:nth-child(odd) {
+      grid-column: span 2;
+    }
+  }
+}
+
+/*==========  Desktop First Method  ==========*/
+
+@media (max-width: $screen-container + 40px) {
+  .content {
     &__container {
-        padding-top: 30px;
-        display: grid;
-        grid-template-columns: 1fr 267px;
-        column-gap: 70px;
+      padding: 30px;
+      grid-template-columns: 1fr;
     }
+  }
+}
 
-    &__sidebar {
-        margin-top: 9px;
-        background-color: $color-purple;
-    }
-
+@media (max-width: $screen-md) {
+  .content {
     &__comment {
-        margin-bottom: 45px;
-        display: grid;
-        grid-template-columns: auto 1fr 137px;
+      grid-template-columns: 1fr 137px;
     }
 
     &__comment-avatar-wrapper {
-        padding-top: 35px;
-        padding-left: 35px;
-        background-color: $color-green;
-    }
-
-    &__comment-avatar {
-        height: 120px;
-        width: 120px;
-        border-radius: 50%;
-        background-color: $color-purple;
-    }
-
-    &__comment-text-wrapper {
-        padding-top: 24px;
-        padding-left: 12px;
-        background-color: $color-green;
-    }
-
-    &__comment-author {
-        margin-bottom: 15px;
-        font-size: $size-sm;
-        font-weight: $weight-bold;
-    }
-
-    &__cooment-text {
-        font-size: $size-sm;
-    }
-
-    &__comment-social {
-        padding-top: 20px;
-        background-color: $color-purple;
-    }
-
-    &__comment-like-title, &__comment-share-title {
-        text-align: center;
-        color: $color-white;
-    }
-
-    &__comment-like-title {
-        margin-bottom: 12px;
-    }
-
-    &__comment-share-title {
-        margin-bottom: 8px;
-    }
-
-    &__comment-like-button {
-        margin-bottom: 6px;
-    }
-
-    &__comment-share-button {
-        margin-bottom: 17px;
+      display: none;
     }
 
     &__order {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 60px 30px;
-        justify-content: center;
+      grid-template-columns: auto;
     }
+  }
+}
 
-    &__order-item-checkbox {
-       display: none;
-
-       &:checked + .content__order-item {
-            background-color:$color-light;
-       }
-    } 
-
-    &__order-item {
-        cursor: pointer;
-
-        &:hover {
-            background-color: $color-light;
-        }
+@media (max-width: $screen-md) {
+  .content {
+    &__comment {
+      grid-template-columns: 1fr;
     }
-
-    &__order-item-title {
-        margin-bottom: 20px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    &__order-item-image {
-        margin-bottom: 30px;
-        width: 350px;
-        height: 200px;
-        background-color: $color-green;
-
-        &:hover {
-            background-color: $color-purple;
-        }
-    }
-
-    &__order-button {
-        justify-self: center;
-        align-self: center;
-
-        &:nth-child(odd) {
-            grid-column: span 2;
-        }
-    }
+  }
 }

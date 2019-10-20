@@ -2,6 +2,7 @@
   background-color: $color-purple;
 
   &__container {
+    padding-top: 60px;
     height: 752px;
   }
 
@@ -50,6 +51,11 @@
     height: 85px;
     border-radius: 50%;
     background-color: $color-white;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__menu-item-title {
@@ -57,6 +63,11 @@
     white-space: nowrap;
     color: $color-default;
     font-size: $size-md;
+    font-family: "Myriad Pro", sans-serif;
+
+    &:hover {
+      color: lighten($color-default, 10%);
+    }
 
     &_left {
       top: 30px;
@@ -72,5 +83,65 @@
 
 /*==========  Desktop First Method  ==========*/
 
-@media (max-width: $screen-container) {
+@media (max-width: $screen-container + 40px) {
+  .header__menu-item-title {
+    display: none;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .header__logo {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .header {
+    &__menu {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__menu-item {
+      height: 65px;
+      width: 65px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__menu-item-wrapper {
+      position: absolute;
+
+      &_second {
+        left: 180px;
+      }
+
+      &_third {
+        top: 90px;
+        left: -30px;
+      }
+
+      &_fourth {
+        top: 90px;
+        left: 215px;
+      }
+
+      &_fifth {
+        top: 185px;
+      }
+
+      &_sixth {
+        top: 185px;
+        left: 180px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .header__container {
+    height: 700px;
+  }
 }
