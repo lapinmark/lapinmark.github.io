@@ -126,7 +126,7 @@
   &__order-item-image {
     margin: 0 auto;
     margin-bottom: 30px;
-    max-width: 350px;
+    width: 350px;
     height: 200px;
     background-color: $color-green;
 
@@ -172,10 +172,14 @@
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-sm) {
   .content {
     &__comment {
       grid-template-columns: 1fr;
+    }
+
+    &__order-item-image {
+      width: 250px;
     }
   }
 }
