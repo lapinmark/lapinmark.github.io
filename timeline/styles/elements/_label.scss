@@ -1,0 +1,8 @@
+.label {
+    position: absolute;
+    color: $color-font;
+
+    &_hidden {
+        display: none;
+    }
+}

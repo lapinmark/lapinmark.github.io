@@ -1,0 +1,22 @@
+.timeline {
+    padding-top: 50px;
+
+    &__container {
+        margin: 0 auto;
+        width: 80vw;
+    }
+
+    &__wrapper {
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item_hidden {
+        display: none;
+    }
+}
+
+.settings__label-position {
+    margin-bottom: 20px;
+}

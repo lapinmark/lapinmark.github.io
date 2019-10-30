@@ -1,0 +1,32 @@
+.progress-line {
+    position: relative;
+    display: block;
+    height: 2px;
+    margin: 0 2px;
+    flex-grow: 1;
+    text-align: center;
+
+    &_done {
+        background-color: $color-done;
+    }
+
+    &_in-progress {
+        background-color: $color-in-progress;
+    }
+
+    &_undone {
+        background-color: $color-undone;
+    }
+
+    &__label {
+        transform: translateX(-50%);
+
+        &_top {
+            bottom: 10px;
+        }
+        
+        &_bottom {
+            top: 10px;
+        }
+    }
+}

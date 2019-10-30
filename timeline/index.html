@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <title>Timeline</title>
+</head>
+
+<body>
+  <section class="timeline">
+    <div class="timeline__container">
+      <div class="timeline__wrapper">
+        <div class="checkpoint checkpoint_done timeline__checkpoint">
+          <span class="label label_hidden checkpoint__label checkpoint__label_top">Step 1</span>
+          <span class="label label_hidden checkpoint__label checkpoint__label_bottom">Step 1</span>
+        </div>
+        <div class="progress-line progress-line_done timeline__progress-line">
+          <span class="label progress-line__label progress-line__label_top">Step 1</span>
+          <span class="label label_hidden progress-line__label progress-line__label_bottom">Step 1</span>
+        </div>
+        <div class="checkpoint checkpoint_done timeline__checkpoint">
+          <span class="label label_hidden checkpoint__label checkpoint__label_top">Step 2</span>
+          <span class="label label_hidden checkpoint__label checkpoint__label_bottom">Step 2</span>
+        </div>
+        <div class="progress-line progress-line_done timeline__progress-line">
+          <span class="label progress-line__label progress-line__label_top">Step 2</span>
+          <span class="label label_hidden progress-line__label progress-line__label_bottom">Step 2</span>
+        </div>
+        <div class="checkpoint checkpoint_in-progress timeline__checkpoint">
+          <span class="label label_hidden checkpoint__label checkpoint__label_top">Step 3</span>
+          <span class="label label_hidden checkpoint__label checkpoint__label_bottom">Step 3</span>
+        </div>
+        <div class="progress-line progress-line_in-progress timeline__progress-line unwanted">
+          <span class="label progress-line__label progress-line__label_top">Step 3</span>
+          <span class="label label_hidden progress-line__label progress-line__label_bottom">Step 3</span>
+        </div>
+        <div class="checkpoint checkpoint_undone timeline__checkpoint unwanted"></div>
+        <div class="progress-line progress-line_undone timeline__progress-line">
+          <span class="label progress-line__label progress-line__label_top">Step 4</span>
+          <span class="label label_hidden progress-line__label progress-line__label_bottom">Step 4</span>
+        </div>
+        <div class="checkpoint checkpoint_undone timeline__checkpoint">
+          <span class="label label_hidden checkpoint__label checkpoint__label_top">Step 4</span>
+          <span class="label label_hidden checkpoint__label checkpoint__label_bottom">Step 4</span>
+        </div>
+      </div>
+      <form class="timeline__settings" name="timelineSettings">
+        <div class="settings__label-position">
+          <input type="radio" name="labelPosition" id="labelTopLine" value="TopLine">
+          <label for="labelTopLine">Above the progress line</label><br>
+          <input type="radio" name="labelPosition" id="labelBottomLine" value="BottomLine">
+          <label for="labelBottomLine">Under the progress line</label><br>
+          <input type="radio" name="labelPosition" id="labelTopCheckpoint" value="TopCheckpoint">
+          <label for="labelTopCheckpoint">Above the checkpoint</label><br>
+          <input type="radio" name="labelPosition" id="labelBottomCheckpoint" value="BottomCheckpoint">
+          <label for="labelBottomCheckpoint">Under the checkpoint</label><br>
+        </div>
+        <button type="button" class="button button_change-view">Change view</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/jquery-3.4.0.min.js"></script>
+  <script src="js/changeView.js"></script>
+</body>
+
+</html>
