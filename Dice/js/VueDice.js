@@ -16,7 +16,7 @@ let diceSample = new Vue({
 
     changeValue() {
       let dice = document.getElementById('dice');
-      dice.classList.add('dice_rotate'),1800;
+      dice.classList.add('dice_rotate');
       dice.classList.remove('dice_one', 'dice_two','dice_three', 'dice_four','dice_five', 'dice_six');
       diceValue = this.randomDice();
 
