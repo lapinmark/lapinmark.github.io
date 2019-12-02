@@ -1,0 +1,141 @@
+@keyframes rotating {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container {
+    display: flex;
+}
+
+.dice {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #000;
+    
+    &_rotate {
+        animation: rotating 1s ease 1;
+    }
+
+    &_one {
+        .dot {
+        
+            &_top-left, &_middle-left, &_bottom-left, &_top-right, &_middle-right, &_bottom-right {
+                opacity: 0;
+            }
+        
+            &_center {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_two {
+        .dot {
+        
+            &_top-left, &_middle-left, &_center, &_middle-right, &_bottom-right {
+                opacity: 0;
+            }
+        
+            &_bottom-left, &_top-right {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_three {
+        .dot {
+        
+            &_top-left, &_middle-left, &_middle-right, &_bottom-right {
+                opacity: 0;
+            }
+        
+            &_bottom-left, &_center, &_top-right {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_four {
+        .dot {
+        
+            &_middle-left, &_center, &_middle-right {
+                opacity: 0;
+            }
+        
+            &_top-left, &_bottom-left, &_top-right, &_bottom-right {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_five {
+        .dot {
+        
+            &_middle-left, &_middle-right {
+                opacity: 0;
+            }
+        
+            &_top-left, &_bottom-left, &_center, &_top-right, &_bottom-right {
+                opacity: 1;
+            }
+        }
+    }
+
+    &_six {
+        .dot {
+        
+            &_center {
+                opacity: 0;
+            }
+        
+            &_top-left, &_middle-left, &_bottom-left, &_top-right, &_middle-right, &_bottom-right {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    &_top-left {
+        top: 5px;
+        left: 5px;
+    }
+
+    &_middle-left {
+        top: 21px;
+        left: 5px;
+    }
+
+    &_bottom-left {
+        bottom: 5px;
+        left: 5px;
+    }
+
+    &_center {
+        top: 21px;
+        left: 21px;
+    }
+
+    &_top-right {
+        top: 5px;
+        right: 5px;
+    }
+
+    &_middle-right {
+        top: 21px;
+        right: 5px;
+    }
+
+    &_bottom-right {
+        bottom: 5px;
+        right: 5px;
+    }
+}

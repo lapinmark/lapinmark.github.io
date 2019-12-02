@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <script src="libs/vue.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container dice-sample" @click="changeValue">
+        <div class="dice dice_six" id="dice">
+            <div class="dot dot_top-left"></div>
+            <div class="dot dot_middle-left"></div>
+            <div class="dot dot_bottom-left"></div>
+            <div class="dot dot_center"></div>
+            <div class="dot dot_top-right"></div>
+            <div class="dot dot_middle-right"></div>
+            <div class="dot dot_bottom-right"></div>
+        </div>
+    </div>
+    <script src="js/VueDice.js"></script>
+</body>
+</html>
