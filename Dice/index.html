@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <div class="container dice-sample" @click="changeValue">
-        <div class="dice dice_six" id="dice">
+    <div class="container dice-sample" @click="">
+        <div class="dice" id="dice" v-bind:class="diceClass">
             <div class="dot dot_top-left"></div>
             <div class="dot dot_middle-left"></div>
             <div class="dot dot_bottom-left"></div>
