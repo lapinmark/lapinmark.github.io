@@ -6,16 +6,59 @@ let diceSample = new Vue({
   },
 
   computed: {
-    diceClass: function () {
-      diceValue = this.randomDice();
+    diceClass: {
 
-      return {
-        'dice_one': diceValue === 1,
-        'dice_two': diceValue === 2,
-        'dice_three': diceValue === 3,
-        'dice_four': diceValue === 4,
-        'dice_five': diceValue === 5,
-        'dice_six': diceValue === 6
+      get: function () {
+        diceValue = this.randomDice();
+
+        switch (diceValue) {
+          case 1:
+            diceClassValue = 'dice_one';
+            break;
+          case 2:
+            diceClassValue = 'dice_two';
+            break;
+          case 3:
+            diceClassValue = 'dice_three';
+            break;
+          case 4:
+            diceClassValue = 'dice_four';
+            break;
+          case 5:
+            diceClassValue = 'dice_five';
+            break;
+          case 6:
+            diceClassValue = 'dice_six';
+            break;
+        }
+
+        return diceClassValue;
+
+      },
+
+      set: function () {
+        diceValue = this.randomDice();
+
+        switch (diceValue) {
+          case 1:
+            diceClassValue = 'dice_one';
+            break;
+          case 2:
+            diceClassValue = 'dice_two';
+            break;
+          case 3:
+            diceClassValue = 'dice_three';
+            break;
+          case 4:
+            diceClassValue = 'dice_four';
+            break;
+          case 5:
+            diceClassValue = 'dice_five';
+            break;
+          case 6:
+            diceClassValue = 'dice_six';
+            break;
+        }
       }
     }
   },
@@ -28,6 +71,10 @@ let diceSample = new Vue({
 
     stopRotate(dice) {
       dice.classList.remove('dice_rotate');
+    },
+
+    changeDiceValue() {
+      diceSample.diceClass = '';
     }
   }
 });
