@@ -29,6 +29,5 @@ let diceSample = new Vue({
     stopRotate(dice) {
       dice.classList.remove('dice_rotate');
     }
-    
   }
 });
