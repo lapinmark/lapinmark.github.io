@@ -1,0 +1,30 @@
+.header {
+  height: 62px;
+  margin-bottom: 17px;
+  background-color: #749c8d;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-wrapper, &__social-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
+
+  &__company-name {
+    font-size: 26px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__social-link {
+    margin-left: 12px;
+  }
+}

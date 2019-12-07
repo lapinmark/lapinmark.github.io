@@ -1,0 +1,62 @@
+.banner {
+  height: 247px;
+  position: sticky;
+  top: 0;
+  background-color: #f0f0ea;
+  box-shadow: 0 0 10px rgba(16, 17, 17, 0.4);
+  z-index: 1;
+
+  &__gifts,
+  &__sale,
+  &__snowflakes,
+  &__discounts,
+  &__snowman,
+  &__tree,
+  &__arrow,
+  &__shadow {
+    position: absolute;
+  }
+
+  &__gifts {
+    bottom: 0;
+    left: 0;
+  }
+
+  &__sale {
+    top: 0;
+    left: 275px;
+    z-index: 2;
+  }
+
+  &__snowflakes {
+    left: 193px;
+  }
+
+  &__discounts {
+    top: 15px;
+    left: 470px;
+    z-index: 3;
+  }
+
+  &__snowman {
+    right: 182px;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  &__tree {
+    right: -13px;
+    bottom: 2px;
+  }
+
+  &__arrow {
+    right: 45px;
+    top: 128px;
+    z-index: 3;
+  }
+
+  &__shadow {
+    z-index: 1;
+    bottom: -53px;
+  }
+}
