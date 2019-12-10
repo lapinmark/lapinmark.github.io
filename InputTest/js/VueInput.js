@@ -1,18 +1,23 @@
-const diceSample = new Vue({
+const defaultQuery = '';
+
+const TestInput = new Vue({
   el: '.input-test',
   data: {
-    query: 'Roboto',
-    fonts: ['Roboto Slab', 'Roboto Condensed', 'Roboto Mono']
+    query: defaultQuery,
+    fonts: ['Roboto Slab', 'Roboto Condensed', 'Roboto Mono', 'Arial', 'Reem', 'Rasa']
   },
 
   computed: {
-    searchedFonts(query) {
-      return this.fonts.filter(function(currentFont) {
-        return currentFont.toLowerCase().indexOf(query.toLowerCase()) > -1;
+    searchedFonts() {
+      return this.fonts.filter(currentFont => {
+        return currentFont.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
     })
     }
   },
 
   methods: {
+    changeInputValue() {
+      this.query = this.font;
+    }
   }
 });

@@ -21,7 +21,7 @@
       <input v-model="query" type="text" placeholder="Roboto" class="input">
       <div class="input-underline"></div>
       <ul class="select">
-        <li v-for="font in searchedFonts" class="select-item"> {{ font }} </li>
+        <li v-for="font in searchedFonts" @click="changeInputValue" class="select-item"> {{ font }} </li>
       </ul>
     </div>
   </div>
