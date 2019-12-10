@@ -16,8 +16,8 @@ const TestInput = new Vue({
   },
 
   methods: {
-    changeInputValue() {
-      this.query = this.font;
+    changeInputValue(font) {
+      this.query = font;
     }
   }
 });
