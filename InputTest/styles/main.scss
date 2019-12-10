@@ -1,0 +1,78 @@
+@import 'partials/body.scss';
+
+
+.input-wrapper {
+  position: relative;
+  width: 276px;
+}
+
+.input {
+  width: 100%;
+  height: 26px;
+  border: none;
+  border-bottom: solid 1px gray;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  outline: none;
+
+  &:focus ~ .input-underline {
+    width: 100%;
+  }
+
+  &:focus ~ .select {
+    display: block;
+  }
+}
+
+.input-arrow {
+  position: absolute;
+  width: 9px;
+  height: 1px;
+  right: 0;
+  top: 12px;
+  background: #858585;
+  transform: rotate(-45deg);
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background: #858585;
+    transform: translate(-4px, -4px) rotate(90deg);
+  }
+}
+
+.input-underline {
+  position: absolute;
+  top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #1155CC;
+  z-index: 1;
+  transition: width .2s;
+}
+
+.select {
+  display: none;
+  width: 276px;
+}
+
+.select-item {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background: #F1F1F1;  
+  }
+}
