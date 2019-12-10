@@ -18,10 +18,10 @@
   <div class="input-test">
     <div class="input-wrapper">
       <div class="input-arrow"></div>
-      <input v-model="query" type="text" placeholder="Roboto" class="input">
+      <input v-model="query" type="text" placeholder="Roboto"  class="input">
       <div class="input-underline"></div>
       <ul class="select">
-        <li v-for="font in searchedFonts" @click="changeInputValue(font)" class="select-item"> {{ font }} </li>
+        <li v-for="font in searchedFonts" @mousedown="changeInputValue(font)" class="select-item"> {{ font }} </li>
       </ul>
     </div>
   </div>
