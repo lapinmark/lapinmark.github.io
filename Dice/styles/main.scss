@@ -5,6 +5,44 @@
 
 .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bet-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.bet-switch-box {
+    display: flex;
+    align-items: center;
+    margin: 0 4px;
+    width: 50px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.bet-switch {
+    height: 18px;
+    width: 18px;
+    margin: 0 1px;
+    border-radius: 50%;
+    background-color: #000;
+    transform: translateX(0);
+    transition: transform .3s;
+
+    &_more {
+        transform: translateX(30px);
+    }
+}
+
+.dice-wrapper {
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .dice {
@@ -14,7 +52,11 @@
     border-radius: 5px;
     background-color: #000;
     cursor: pointer;
-    
+
+    &_first {
+        margin-right: 30px;
+    }
+
     &_rotate {
         animation: rotating 1s ease 1;
     }
@@ -140,4 +182,8 @@
         bottom: 5px;
         right: 5px;
     }
+}
+
+.dice-summ_highlight {
+    font-weight: bold;
 }
