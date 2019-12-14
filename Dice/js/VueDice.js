@@ -7,7 +7,7 @@ const diceSample = new Vue({
   <div class="container dice-sample">
         <h2 class="title">Попробуйте угадать сумму и бросьте кубики</h2>
         <div @click="changeBet" class="bet-wrapper">
-            <div class="bet-less">1 - 6</div>
+            <div class="bet-less">2 - 6</div>
             <div class="bet-switch-box">
                 <div :class="{ 'bet-switch_more': isMore }" class="bet-switch"></div>
             </div>
