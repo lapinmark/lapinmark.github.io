@@ -2,6 +2,8 @@
 ## Портфолио
 [agency](https://lapinmark.github.io/agency)
 
+[Dice (Vue)](https://lapinmark.github.io/Dice)
+
 [webim](https://lapinmark.github.io/webim)
 
 [test](https://lapinmark.github.io/test)
