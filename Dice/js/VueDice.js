@@ -5,16 +5,12 @@ const diceSample = new Vue({
   el: '.dice-sample',
   template: `
   <div class="container dice-sample">
-        <h2 class="title">Попробуйте угадать сумму и бросьте кубики</h2>
-        <div @click="changeBet" class="bet-wrapper">
-            <div class="bet-less">2 - 6</div>
-            <div class="bet-switch-box">
-                <div :class="{ 'bet-switch_more': isMore }" class="bet-switch"></div>
-            </div>
-            <div class="bet-more">7 - 12</div>
+        
+        <div @click="addDice" class="add-button-wrapper">
+            <button :disabled="isThirdActive">+</button>
         </div>
         <div @click="shuffleDice" class="dice-wrapper">
-            <div class="dice dice_first" :class="[diceFirstClass, rotateClass]">
+            <div :class="[diceFirstClass, rotateClass]" class="dice dice_first">
                 <div class="dot dot_top-left"></div>
                 <div class="dot dot_middle-left"></div>
                 <div class="dot dot_bottom-left"></div>
@@ -23,7 +19,16 @@ const diceSample = new Vue({
                 <div class="dot dot_middle-right"></div>
                 <div class="dot dot_bottom-right"></div>
             </div>
-            <div class="dice dice_second" :class="[diceSecondClass, rotateClass]">
+            <div v-if="isSecondActive" :class="[diceSecondClass, rotateClass]" class="dice dice_second">
+                <div class="dot dot_top-left"></div>
+                <div class="dot dot_middle-left"></div>
+                <div class="dot dot_bottom-left"></div>
+                <div class="dot dot_center"></div>
+                <div class="dot dot_top-right"></div>
+                <div class="dot dot_middle-right"></div>
+                <div class="dot dot_bottom-right"></div>
+            </div>
+            <div v-if="isThirdActive" :class="[diceThirdClass, rotateClass]" class="dice dice_third">
                 <div class="dot dot_top-left"></div>
                 <div class="dot dot_middle-left"></div>
                 <div class="dot dot_bottom-left"></div>
@@ -41,8 +46,10 @@ const diceSample = new Vue({
     minValue: 1,
     diceFirstValue: diceDefaultValue,
     diceSecondValue: diceDefaultValue,
+    diceThirdValue: diceDefaultValue,
     rotateClass: rotateDefaultValue,
-    isMore: false
+    isSecondActive: false,
+    isThirdActive: false
   },
 
   computed: {
@@ -60,6 +67,8 @@ const diceSample = new Vue({
           return 'dice_five';
         case 6:
           return 'dice_six';
+        default:
+          return "dice_six";
       }
     },
 
@@ -77,11 +86,34 @@ const diceSample = new Vue({
           return 'dice_five';
         case 6:
           return 'dice_six';
+        default:
+          return "dice_six";
+      }
+    },
+
+    diceThirdClass() {
+      switch (this.diceThirdValue) {
+        case 1:
+          return 'dice_one';
+        case 2:
+          return 'dice_two';
+        case 3:
+          return 'dice_three';
+        case 4:
+          return 'dice_four';
+        case 5:
+          return 'dice_five';
+        case 6:
+          return 'dice_six';
+        default:
+          return "dice_six";
       }
     },
 
     diceSumm() {
-      return this.diceFirstValue + this.diceSecondValue;
+      if (this.isSecondActive && this.isThirdActive) return this.diceFirstValue + this.diceSecondValue + this.diceThirdValue;
+      if (this.isSecondActive && !this.isThirdActive) return this.diceFirstValue + this.diceSecondValue;
+      return this.diceFirstValue;
     }
   },
 
@@ -104,18 +136,18 @@ const diceSample = new Vue({
       this.rotateDice();
       this.diceFirstValue = this.getRandomDice();
       this.diceSecondValue = this.getRandomDice();
-      setTimeout(this.alertResult, 1100);
+      this.diceThirdValue = this.getRandomDice();
     },
 
-    changeBet() {
-      this.isMore = !this.isMore;
-    },
-
-    alertResult() {
-      if (this.diceSumm < 7 && this.isMore === false) alert('Вы выиграли!');
-      if (this.diceSumm < 7 && this.isMore === true) alert('Вы проиграли!');
-      if (this.diceSumm > 6 && this.isMore === true) alert('Вы выиграли!');
-      if (this.diceSumm > 6 && this.isMore === false) alert('Вы проиграли!');
+    addDice() {
+      if (!this.isSecondActive) {
+        this.isSecondActive = true;
+        return;
+      }
+      if (this.isSecondActive) {
+        this.isThirdActive = true;
+        return;
+      }
     }
   }
 });

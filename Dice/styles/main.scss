@@ -10,34 +10,8 @@
     text-align: center;
 }
 
-.bet-wrapper {
-    display: flex;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-.bet-switch-box {
-    display: flex;
-    align-items: center;
-    margin: 0 4px;
-    width: 50px;
-    height: 20px;
-    border: 1px solid #000;
-    border-radius: 15px;
-}
-
-.bet-switch {
-    height: 18px;
-    width: 18px;
-    margin: 0 1px;
-    border-radius: 50%;
-    background-color: #000;
-    transform: translateX(0);
-    transition: transform .3s;
-
-    &_more {
-        transform: translateX(30px);
-    }
+.add-button-wrapper {
+    margin-bottom: 30px;
 }
 
 .dice-wrapper {
@@ -53,8 +27,8 @@
     background-color: #000;
     cursor: pointer;
 
-    &_first {
-        margin-right: 30px;
+    &_second, &_third {
+        margin-left: 30px;
     }
 
     &_rotate {
