@@ -5,7 +5,6 @@ const diceSample = new Vue({
   el: '.dice-sample',
   template: `
   <div class="container dice-sample">
-        
         <div @click="addDice" class="add-button-wrapper">
             <button :disabled="isThirdActive">+</button>
         </div>
