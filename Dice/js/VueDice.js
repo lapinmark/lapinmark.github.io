@@ -53,60 +53,15 @@ const diceSample = new Vue({
 
   computed: {
     diceFirstClass() {
-      switch (this.diceFirstValue) {
-        case 1:
-          return 'dice_one';
-        case 2:
-          return 'dice_two';
-        case 3:
-          return 'dice_three';
-        case 4:
-          return 'dice_four';
-        case 5:
-          return 'dice_five';
-        case 6:
-          return 'dice_six';
-        default:
-          return "dice_six";
-      }
+      return this.changeDiceClass(this.diceFirstValue);
     },
 
     diceSecondClass() {
-      switch (this.diceSecondValue) {
-        case 1:
-          return 'dice_one';
-        case 2:
-          return 'dice_two';
-        case 3:
-          return 'dice_three';
-        case 4:
-          return 'dice_four';
-        case 5:
-          return 'dice_five';
-        case 6:
-          return 'dice_six';
-        default:
-          return "dice_six";
-      }
+      return this.changeDiceClass(this.diceSecondValue);
     },
 
     diceThirdClass() {
-      switch (this.diceThirdValue) {
-        case 1:
-          return 'dice_one';
-        case 2:
-          return 'dice_two';
-        case 3:
-          return 'dice_three';
-        case 4:
-          return 'dice_four';
-        case 5:
-          return 'dice_five';
-        case 6:
-          return 'dice_six';
-        default:
-          return "dice_six";
-      }
+      return this.changeDiceClass(this.diceThirdValue);
     },
 
     diceSumm() {
@@ -120,6 +75,25 @@ const diceSample = new Vue({
     getRandomDice() {
       let value = this.minValue + Math.random() * (this.maxValue + 1 - this.minValue);
       return Math.floor(value);
+    },
+
+    changeDiceClass(diceValue) {
+      switch (diceValue) {
+        case 1:
+          return 'dice_one';
+        case 2:
+          return 'dice_two';
+        case 3:
+          return 'dice_three';
+        case 4:
+          return 'dice_four';
+        case 5:
+          return 'dice_five';
+        case 6:
+          return 'dice_six';
+        default:
+          return "dice_six";
+      }
     },
 
     stopRotation() {
