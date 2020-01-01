@@ -6,28 +6,10 @@ const diceSample = new Vue({
   template: `
   <div class="container dice-sample">
         <div @click="addDice" class="add-button-wrapper">
-            <button :disabled="isThirdActive">+</button>
+            <button>+</button>
         </div>
         <div @click="shuffleDice" class="dice-wrapper">
-            <div :class="[diceFirstClass, rotateClass]" class="dice dice_first">
-                <div class="dot dot_top-left"></div>
-                <div class="dot dot_middle-left"></div>
-                <div class="dot dot_bottom-left"></div>
-                <div class="dot dot_center"></div>
-                <div class="dot dot_top-right"></div>
-                <div class="dot dot_middle-right"></div>
-                <div class="dot dot_bottom-right"></div>
-            </div>
-            <div v-if="isSecondActive" :class="[diceSecondClass, rotateClass]" class="dice dice_second">
-                <div class="dot dot_top-left"></div>
-                <div class="dot dot_middle-left"></div>
-                <div class="dot dot_bottom-left"></div>
-                <div class="dot dot_center"></div>
-                <div class="dot dot_top-right"></div>
-                <div class="dot dot_middle-right"></div>
-                <div class="dot dot_bottom-right"></div>
-            </div>
-            <div v-if="isThirdActive" :class="[diceThirdClass, rotateClass]" class="dice dice_third">
+            <div v-for="dice in dices" :class="[dice.diceClass, rotateClass]" class="dice">
                 <div class="dot dot_top-left"></div>
                 <div class="dot dot_middle-left"></div>
                 <div class="dot dot_bottom-left"></div>
@@ -43,31 +25,15 @@ const diceSample = new Vue({
   data: {
     maxValue: 6,
     minValue: 1,
-    diceFirstValue: diceDefaultValue,
-    diceSecondValue: diceDefaultValue,
-    diceThirdValue: diceDefaultValue,
     rotateClass: rotateDefaultValue,
-    isSecondActive: false,
-    isThirdActive: false
+    dices: [{ value: 6, diceClass: 'dice_six' }]
   },
 
   computed: {
-    diceFirstClass() {
-      return this.changeDiceClass(this.diceFirstValue);
-    },
-
-    diceSecondClass() {
-      return this.changeDiceClass(this.diceSecondValue);
-    },
-
-    diceThirdClass() {
-      return this.changeDiceClass(this.diceThirdValue);
-    },
-
     diceSumm() {
-      if (this.isSecondActive && this.isThirdActive) return this.diceFirstValue + this.diceSecondValue + this.diceThirdValue;
-      if (this.isSecondActive && !this.isThirdActive) return this.diceFirstValue + this.diceSecondValue;
-      return this.diceFirstValue;
+      return this.dices.reduce(function(accumulator, current) {
+        return accumulator + current.value;
+      }, 0);
     }
   },
 
@@ -77,22 +43,23 @@ const diceSample = new Vue({
       return Math.floor(value);
     },
 
-    changeDiceClass(diceValue) {
-      switch (diceValue) {
+    changeDiceClass() {
+      let randomDice = this.getRandomDice();
+      switch (randomDice) {
         case 1:
-          return 'dice_one';
+          return { value: 1, diceClass: 'dice_one' };
         case 2:
-          return 'dice_two';
+          return { value: 2, diceClass: 'dice_two' };
         case 3:
-          return 'dice_three';
+          return { value: 3, diceClass: 'dice_three' };
         case 4:
-          return 'dice_four';
+          return { value: 4, diceClass: 'dice_four' };
         case 5:
-          return 'dice_five';
+          return { value: 5, diceClass: 'dice_five' };
         case 6:
-          return 'dice_six';
+          return { value: 6, diceClass: 'dice_six' };
         default:
-          return "dice_six";
+          return { value: 6, diceClass: 'dice_six' };
       }
     },
 
@@ -107,20 +74,19 @@ const diceSample = new Vue({
 
     shuffleDice() {
       this.rotateDice();
-      this.diceFirstValue = this.getRandomDice();
-      this.diceSecondValue = this.getRandomDice();
-      this.diceThirdValue = this.getRandomDice();
+      this.dices = this.dices.map(updateValues => this.changeDiceArray());
+    },
+
+    changeDiceArray() {
+      return this.changeDiceClass();
+    },
+
+    countSumm(previous, current) {
+      return previous.value + current.value;
     },
 
     addDice() {
-      if (!this.isSecondActive) {
-        this.isSecondActive = true;
-        return;
-      }
-      if (this.isSecondActive) {
-        this.isThirdActive = true;
-        return;
-      }
+      this.dices.push({ value: 6, diceClass: 'dice_six' });
     }
   }
 });
