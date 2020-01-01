@@ -81,10 +81,6 @@ const diceSample = new Vue({
       return this.changeDiceClass();
     },
 
-    countSumm(previous, current) {
-      return previous.value + current.value;
-    },
-
     addDice() {
       this.dices.push({ value: 6, diceClass: 'dice_six' });
     }
