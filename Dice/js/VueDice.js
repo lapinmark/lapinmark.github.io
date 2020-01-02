@@ -5,8 +5,9 @@ const diceSample = new Vue({
   el: '.dice-sample',
   template: `
   <div class="container dice-sample">
-        <div @click="addDice" class="add-button-wrapper">
-            <button>+</button>
+        <div class="buttons-wrapper">
+            <button @click="addDice" :disabled="!isAddingActive" class="button button_add">+</button>
+            <button @click="removeDice" :disabled="!isRemovingActive" class="button button_remove">-</button>
         </div>
         <div @click="shuffleDice" class="dice-wrapper">
             <div v-for="dice in dices" :class="[dice.diceClass, rotateClass]" class="dice">
@@ -34,6 +35,14 @@ const diceSample = new Vue({
       return this.dices.reduce(function(accumulator, current) {
         return accumulator + current.value;
       }, 0);
+    },
+
+    isAddingActive() {
+      if (this.dices.length > 8) {return false} else {return true}
+    },
+
+    isRemovingActive() {
+      if (this.dices.length < 2) {return false} else {return true}
     }
   },
 
@@ -83,6 +92,10 @@ const diceSample = new Vue({
 
     addDice() {
       this.dices.push({ value: 6, diceClass: 'dice_six' });
+    },
+
+    removeDice() {
+      this.dices.pop();
     }
   }
 });
