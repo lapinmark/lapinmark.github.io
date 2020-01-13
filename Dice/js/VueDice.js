@@ -1,6 +1,3 @@
-const diceDefaultValue = 6;
-const rotateDefaultValue = '';
-
 const diceSample = new Vue({
   el: '.dice-sample',
   template: `
@@ -10,7 +7,7 @@ const diceSample = new Vue({
             <button @click="removeDice" :disabled="!isRemovingActive" class="button button_remove">-</button>
         </div>
         <div @click="shuffleDice" class="dice-wrapper">
-            <div v-for="dice in dices" :class="[dice.diceClass, rotateClass]" class="dice">
+            <div v-for="dice in dices" :class="[dice.diceClass, {dice_rotate: isRotating}]" class="dice">
                 <div class="dot dot_top-left"></div>
                 <div class="dot dot_middle-left"></div>
                 <div class="dot dot_bottom-left"></div>
@@ -26,7 +23,7 @@ const diceSample = new Vue({
   data: {
     maxValue: 6,
     minValue: 1,
-    rotateClass: rotateDefaultValue,
+    isRotating: false,
     dices: [{ value: 6, diceClass: 'dice_six' }]
   },
 
@@ -38,11 +35,11 @@ const diceSample = new Vue({
     },
 
     isAddingActive() {
-      if (this.dices.length > 8) {return false} else {return true}
+      return (this.dices.length < 9);
     },
 
     isRemovingActive() {
-      if (this.dices.length < 2) {return false} else {return true}
+      return (this.dices.length > 1);
     }
   },
 
@@ -73,11 +70,11 @@ const diceSample = new Vue({
     },
 
     stopRotation() {
-      this.rotateClass = '';
+      this.isRotating = false;
     },
 
     rotateDice() {
-      this.rotateClass = 'dice_rotate';
+      this.isRotating = true;
       setTimeout(this.stopRotation, 1100)
     },
 
