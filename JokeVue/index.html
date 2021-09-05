@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jokes</title>
     <script src="libs/vue.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
@@ -16,9 +17,13 @@
                 <li class="jokes__list-item" v-for="joke in searchedJokes" :key="joke.id">
                     <div class="jokes__wrapper" v-if='joke.setup'>
                         <p class="jokes__text">{{joke.setup}} {{joke.delivery}}</p>
+                        <input type="button" value="Like" class="jokes__like"
+                        @click="likeJoke(joke.id)">
                     </div>
                     <div class="jokes__wrapper" v-else>
                         <p class="jokes__text">{{joke.joke}}</p>
+                        <input type="button" value="Like" class="jokes__like"
+                        @click="likeJoke(joke.id)">
                     </div>
                 </li>
             </ul>
