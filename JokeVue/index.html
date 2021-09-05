@@ -18,12 +18,12 @@
                     <div class="jokes__wrapper" v-if='joke.setup'>
                         <p class="jokes__text">{{joke.setup}} {{joke.delivery}}</p>
                         <input type="button" value="Like" class="jokes__like"
-                        @click="likeJoke(joke.id)">
+                        :class="getButtonClass(joke.id)" @click="likeJoke(joke.id)">
                     </div>
                     <div class="jokes__wrapper" v-else>
                         <p class="jokes__text">{{joke.joke}}</p>
                         <input type="button" value="Like" class="jokes__like"
-                        @click="likeJoke(joke.id)">
+                        :class="getButtonClass(joke.id)" @click="likeJoke(joke.id)">
                     </div>
                 </li>
             </ul>
