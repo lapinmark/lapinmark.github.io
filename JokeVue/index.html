@@ -11,8 +11,9 @@
 <body>
     <div class="container jokes-app"> 
         <div class="jokes">
+            <input type="text" class="jokes__search" v-model='search' placeholder="Search">
             <ul class="jokes__list">
-                <li class="jokes__list-item" v-for="joke in jokesList" :key="joke.id">
+                <li class="jokes__list-item" v-for="joke in searchedJokes" :key="joke.id">
                     <div class="jokes__wrapper" v-if='joke.setup'>
                         <p class="jokes__text">{{joke.setup}} {{joke.delivery}}</p>
                     </div>

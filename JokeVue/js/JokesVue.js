@@ -2,11 +2,25 @@ const JokesApp = new Vue({
   el: '.jokes-app',
 
   data: {
-    jokesList: []
+    jokesList: [],
+    search: ''
   },
 
   async created() {
     this.jokesList = await this.getJokes()
+  },
+
+  computed: {
+    searchedJokes() {
+      return this.jokesList.filter(joke => {
+        if (joke.setup) {
+          return joke.setup.toLowerCase().includes(this.search.toLowerCase()) || joke.delivery.toLowerCase().includes(this.search.toLowerCase())
+        }
+        else {
+          return joke.joke.toLowerCase().includes(this.search.toLowerCase())
+        }
+      })
+    }
   },
 
   methods: {
