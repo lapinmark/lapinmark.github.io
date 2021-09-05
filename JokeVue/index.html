@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <script src="libs/vue.js"></script>
+</head>
+
+<body>
+    <div class="container jokes-app"> 
+        <div class="jokes">
+            <ul class="jokes__list">
+                <li class="jokes__list-item" v-for="joke in jokesList" :key="joke.id">
+                    <div class="jokes__wrapper">
+                        <p class="jokes__text">{{joke.joke}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>        
+    </div>
+    <script src="js/JokesVue.js"></script>
+</body>
+
+</html>
