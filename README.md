@@ -2,6 +2,8 @@
 ## Портфолио
 [JokeVue](https://lapinmark.github.io/vue-jokes/)
 
+[TaxesVue](https://lapinmark.github.io/taxesvue/)
+
 [agency](https://lapinmark.github.io/agency)
 
 [Dice (Vue)](https://lapinmark.github.io/Dice)
