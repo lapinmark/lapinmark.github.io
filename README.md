@@ -1,6 +1,6 @@
 # lapinmark
 ## Портфолио
-[JokeVue](https://lapinmark.github.io/jokesvuecli/)
+[JokeVue](https://lapinmark.github.io/jokesvue/)
 
 [TaxesVue](https://lapinmark.github.io/taxesvue/)
 
